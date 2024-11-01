@@ -5,9 +5,7 @@ Ce projet a pour objectif d'installer et de configurer Hyprland, un compositeur 
 
 L'objectif est de mettre en place un système optimisé pour deux usages principaux : un environnement de développement et un environnement de pentesting. Ce projet propose ainsi une configuration polyvalente, adaptée aux besoins spécifiques de chaque contexte d'utilisation.
 
-projet 1 : 
-
-https://github.com/alexandre-Maury/arch-install.git
+projet 1 : https://github.com/alexandre-Maury/arch-install.git
 
 ## Visuels
 À venir
