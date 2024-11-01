@@ -1,4 +1,4 @@
-# `arch-install`
+# `arch-hyprland`
 
 ## Description
 Ce projet a pour objectif d'installer et de configurer Hyprland, un compositeur Wayland dynamique et personnalisable, sur une base Arch Linux. Hyprland est conçu pour offrir un environnement de bureau léger et performant, avec un accent sur la fluidité et la modularité, idéal pour les utilisateurs avancés.
