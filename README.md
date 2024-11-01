@@ -19,11 +19,11 @@ Suivez les étapes ci-dessous pour installer et configurer Arch Linux avec Hyprl
 
     git clone https://github.com/alexandre-Maury/arch-hyprland.git
 
-7- Accédez au répertoire cloné et modifiez le fichier config.sh pour ajuster les options d'installation selon vos préférences :
+2- Accédez au répertoire cloné et modifiez le fichier config.sh pour ajuster les options d'installation selon vos préférences :
 
     cd arch-hyprland && nano config.sh
 
-8- Rendez le script exécutable et lancez-le pour commencer l'installation :
+3- Rendez le script exécutable et lancez-le pour commencer l'installation :
 
     chmod +x install.sh && ./install.sh
 
