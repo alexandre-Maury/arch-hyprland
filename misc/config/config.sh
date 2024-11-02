@@ -6,6 +6,12 @@
 ## Config arch post-install                                                   
 ##############################################################################
 
+REGION="Europe"
+PAYS="France"
+CITY="Paris"
+
+LANG="fr_FR.UTF-8"
+
 # https://github.com/ryanoasis/nerd-fonts/tree/300890327ae50ed08a0c2ba89e8bfd67425dd3b8
 URL_FONTS=(
   "https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/FiraCode/Regular/FiraCodeNerdFont-Regular.ttf"
