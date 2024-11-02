@@ -2,9 +2,9 @@
 
 
 # Apply themes
-~/.config/hypr/scripts/gtkthemes &
+~/.config/hypr/script/gtkthemes &
 
 # Lauch notification daemon (mako)
-~/.config/hypr/scripts/notifications &
+# ~/.config/hypr/script/notifications &
 
 
