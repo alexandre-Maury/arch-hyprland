@@ -27,9 +27,9 @@ cyan = '#4ac9e2'
 white = '#FFFFFF'
 
 [window]
-opacity = 0
+opacity = 1
 blur = true
-dynamic_title = false
+dynamic_title = true
 padding = { x = 16, y = 16 }
 decorations = "None"
 

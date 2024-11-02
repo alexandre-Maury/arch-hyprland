@@ -95,15 +95,12 @@ done
 ##############################################################################
 ## Installation des utilitaires                                                 
 ##############################################################################
-yay -S alacritty nautilus rofi-wayland dunst grim slurp \
-    iw wpa_supplicant bluez bluez-utils blueman seatd \
-    alsa-utils alsa-plugins pipewire pipewire-alsa \
-    pipewire-pulse pipewire-jack pipewire-zeroconf \
-    lib32-pipewire lib32-pipewire-jack wireplumber \
-    lxappearance --noconfirm
+yay -S alacritty nautilus wl-clipboard gnome-text-editor rofi-wayland dunst grim slurp \
+    iw wpa_supplicant bluez bluez-utils blueman seatd alsa-utils alsa-plugins pipewire pipewire-alsa \
+    pipewire-pulse pipewire-jack pipewire-zeroconf lib32-pipewire lib32-pipewire-jack wireplumber papirus-icon-theme --noconfirm
 
 yay -S curl tar wget cmake meson ninja gcc make glibc cairo libzip librsvg tomlplusplus gdb pugixml gbm libdrm libpipewire sdbus-cpp wayland wayland-protocols scdoc \
-    qt5-wayland qt6-wayland libjpeg-turbo libwebp pango pkgconf libglvnd pam udis-86 libxcb xcb-proto xcb-util xcb-util-keysyms \
+    qt5-wayland qt6-wayland qt5ct qt6ct nwg-look libjpeg-turbo libwebp pango pkgconf libglvnd pam udis-86 libxcb xcb-proto xcb-util xcb-util-keysyms \
     libxfixes libx11 libxcomposite xorg-xinput libxrender pixman libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info \
     cpio xcb-util-errors waybar --noconfirm
 

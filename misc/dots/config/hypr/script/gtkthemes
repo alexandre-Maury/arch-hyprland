@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+## Set GTK Themes, Icons, Cursor and Fonts
+
+theme="Yaru-Purple Yaru-Purple-dark Yaru-Purple-light"
+
+THEME='Yaru-Purple-dark'
+ICONS='Yaru-Purple'
+FONT='MesloGS Nerd Font Propo 12'
+CURSOR='Yaru-Purple'
+COLOR="prefer-dark"
+
+SCHEMA='gsettings set org.gnome.desktop.interface'
+
+# gsettings set org.gnome.desktop.interface color-scheme ${COLOR} && sed -i "s/airy/darker/" ~/.config/qt6ct/qt6ct.conf
+
+apply_themes () {
+	${SCHEMA} gtk-theme "$THEME"
+	${SCHEMA} icon-theme "$ICONS"
+	${SCHEMA} cursor-theme "$CURSOR"
+	${SCHEMA} font-name "$FONT"
+	${SCHEMA} color-scheme "$COLOR"
+}
+
+apply_themes

@@ -13,7 +13,7 @@ progress_bar_min_width = 0
 progress_bar_max_width = 444
 progress_bar_frame_width = 0
 
-transparency = 3
+transparency = 0
 horizontal_padding = 11
 frame_width = 6
 frame_color = "#3b4252"

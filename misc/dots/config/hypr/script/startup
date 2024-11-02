@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+
+# Apply themes
+~/.config/hypr/scripts/gtkthemes &
+
+# Lauch notification daemon (mako)
+~/.config/hypr/scripts/notifications &
+
+
