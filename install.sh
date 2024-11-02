@@ -269,3 +269,4 @@ sudo systemctl enable seatd
 ##############################################################################
 cd ..
 rm -rf $workDirName
+log_prompt "SUCCESS" && echo "Installation de Hyprland terminé redémarrer votre systeme" && echo ""
