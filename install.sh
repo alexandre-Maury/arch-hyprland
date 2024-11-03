@@ -1,4 +1,22 @@
 #!/usr/bin/bash
+# https://catppuccin.com/ports
+
+# https://github.com/catppuccin/fish
+# https://github.com/catppuccin/fzf/tree/main
+# https://github.com/catppuccin/hyprlock
+# https://github.com/catppuccin/kitty
+# https://github.com/catppuccin/rofi
+# https://github.com/catppuccin/qt5ct
+# https://github.com/catppuccin/obsidian
+# https://github.com/catppuccin/nvim
+# https://github.com/catppuccin/vim
+# https://github.com/catppuccin/vscode
+# https://github.com/catppuccin/vscode-icons
+# https://github.com/catppuccin/thunderbird
+# https://github.com/catppuccin/xresources
+# https://github.com/catppuccin/zsh-syntax-highlighting
+# https://github.com/catppuccin/zsh-fsh
+# https://github.com/catppuccin/waybar/tree/main
 
 set -e  # Quitte immédiatement en cas d'erreur.
 
@@ -11,8 +29,6 @@ source $SCRIPT_DIR/misc/scripts/functions.sh  # Charge les fonctions définies d
 workDirName="${HOME}/buildHypr";
 rm -rf $workDirName
 mkdir -p $workDirName
-
-# 
 
 ##############################################################################
 ## Information Utilisateur                                              
@@ -101,7 +117,7 @@ done
 ##############################################################################
 ## Themes Installation                                            
 ##############################################################################
-cd ~/.local/share/themes
+# cd ~/.local/share/themes
 # for url in "${URL_THEMES[@]}"; do
 #   file_name=$(basename "$url")
 #   if [ ! -f "$file_name" ]; then
@@ -112,7 +128,7 @@ cd ~/.local/share/themes
 #   fi
 # done
 
-git clone https://github.com/HyDE-Project/hyde-gallery.git
+
 
 ##############################################################################
 ## Icons Installation                                            
@@ -137,8 +153,9 @@ yay -S --needed --noconfirm --ask=4 firefox \
     dolphin \
     ark \
     vim \
-    code                                         
-    # alacritty
+    code \
+    alacritty \
+    btop
 
 yay -S --needed --noconfirm --ask=4 nwg-look \
     qt5ct \
