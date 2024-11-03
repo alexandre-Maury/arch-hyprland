@@ -93,20 +93,111 @@ for url in "${URL_FONTS[@]}"; do
 done
 
 ##############################################################################
+## Themes Installation                                            
+##############################################################################
+mkdir -p ~/.local/share/themes && cd ~/.local/share/themes
+
+# Télécharger chaque fichier seulement s'il n'existe pas déjà
+for url in "${URL_THEMES[@]}"; do
+  file_name=$(basename "$url")
+  if [ ! -f "$file_name" ]; then
+    log_prompt "INFO" && echo "Téléchargement de $file_name" && echo ""
+    curl -fLO "$url"
+  else
+    log_prompt "WARNING" && echo "$file_name existe déjà, themes ignoré" && echo ""
+  fi
+done
+
+##############################################################################
+## Icons Installation                                            
+##############################################################################
+mkdir -p ~/.local/share/icons 
+wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | THEMES='Yaru++ Yaru++-Dark' env DESTDIR="~/.local/share/icons" sh
+
+
+##############################################################################
 ## Installation des utilitaires                                                 
 ##############################################################################
-yay -S alacritty nautilus wl-clipboard gnome-text-editor rofi-wayland dunst grim slurp \
-    iw wpa_supplicant bluez bluez-utils blueman seatd alsa-utils alsa-plugins pipewire pipewire-alsa \
-    pipewire-pulse pipewire-jack pipewire-zeroconf lib32-pipewire lib32-pipewire-jack wireplumber papirus-icon-theme --noconfirm
-
-yay -S curl tar wget cmake meson ninja gcc make glibc cairo libzip librsvg tomlplusplus gdb pugixml gbm libdrm libpipewire sdbus-cpp wayland wayland-protocols scdoc \
-    qt5-wayland qt6-wayland qt5ct qt6ct nwg-look libjpeg-turbo libwebp pango pkgconf libglvnd pam udis-86 libxcb xcb-proto xcb-util xcb-util-keysyms \
-    libxfixes libx11 libxcomposite xorg-xinput libxrender pixman libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info \
-    cpio xcb-util-errors waybar --noconfirm
 
 # https://github.com/Jannomag/Yaru-Colors/tree/master
-# yay -S otf-font-awesome ttf-jetbrains-mono
 
+yay -S curl tar wget cmake meson ninja gcc make cairo libzip librsvg tomlplusplus gdb pugixml gbm libdrm libpipewire sdbus-cpp \
+    libjpeg-turbo libwebp pango pkgconf libglvnd udis-86 libxcb xcb-proto xcb-util xcb-util-keysyms wayland wayland-protocols scdoc \
+    libxfixes libx11 libxcomposite xorg-xinput libxrender pixman libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info \
+    cpio xcb-util-errors  --noconfirm
+
+yay -S firefox \
+    kitty \
+    dolphin \
+    ark \
+    vim \
+    code --noconfirm                                          
+    # alacritty
+
+yay -S nwg-look \
+    qt5ct \
+    qt6ct \
+    kvantum \
+    kvantum-qt5 \
+    qt5-wayland \
+    qt6-wayland --noconfirm                                  
+
+
+yay -S polkit-gnome \
+    xdg-desktop-portal-hyprland \
+    xdg-desktop-portal-gtk \
+    pacman-contrib \
+    python-pyamdgpuinfo \
+    parallel \
+    jq \
+    imagemagick \
+    qt5-imageformats \
+    ffmpegthumbs \
+    kde-cli-tools \
+    libnotify --noconfirm
+
+yay -S dunst \
+    rofi-wayland \
+    waybar \
+    swww \
+    swaylock-effects-git \
+    wlogout \
+    grimblast-git \
+    slurp \
+    swappy \
+    hyprpicker \
+    cliphist --noconfirm
+    # 
+    # wl-clipboard
+
+yay -S seatd \
+    glibc \
+    pam  --noconfirm
+
+yay -S pipewire \
+    pipewire-alsa \
+    pipewire-audio \
+    pipewire-jack \
+    pipewire-pulse \
+    gst-plugin-pipewire \
+    wireplumber \
+    pavucontrol \
+    pamixer \
+    networkmanager \
+    network-manager-applet \
+    bluez \
+    bluez-utils \
+    blueman \
+    brightnessctl \
+    cava \
+    udiskie --noconfirm                                      
+    # iw wpa_supplicant alsa-utils alsa-plugins
+
+
+# yay -S sddm \                                              
+#     qt5-quickcontrols \                                    
+#     qt5-quickcontrols2 \                                   
+#     qt5-graphicaleffects --noconfirm                       
 
 ##############################################################################
 ## hyprutils                                              
@@ -236,29 +327,21 @@ cd ..
 ##############################################################################
 ## Configuration                                              
 ##############################################################################
-cp -rf $SCRIPT_DIR/misc/dots/config/alacritty ~/.config
-cp -rf $SCRIPT_DIR/misc/dots/config/dunst ~/.config
-cp -rf $SCRIPT_DIR/misc/dots/config/fastfetch ~/.config
-cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
-cp -rf $SCRIPT_DIR/misc/dots/config/rofi ~/.config
-cp -rf $SCRIPT_DIR/misc/dots/config/waybar ~/.config
-cp -rf $SCRIPT_DIR/misc/dots/config/alacritty ~/.config
+cp -rf $SCRIPT_DIR/misc/dots/.config $HOME
+cp -rf $SCRIPT_DIR/misc/dots/.local/share $HOME/.local
 
 cp -rf $SCRIPT_DIR/misc/dots/wallpaper $HOME
 cp -rf $SCRIPT_DIR/misc/dots/scripts $HOME
+cp -rf $SCRIPT_DIR/misc/dots/user/.gtkrc-2.0 $HOME 
+cp -rf $SCRIPT_DIR/misc/dots/user/dolphinrc $HOME
 
-cp -rf $SCRIPT_DIR/misc/dots/icons $HOME/.local/share
-cp -rf $SCRIPT_DIR/misc/dots/themes $HOME/.local/share
 
 ##############################################################################
 ## Activation des services                                              
 ##############################################################################
-sudo systemctl enable bluetooth 
-sudo systemctl enable fstrim
-sudo systemctl enable pipewire
-sudo systemctl enable pipewire-pulse
-sudo systemctl enable wireplumber
-sudo systemctl enable seatd
+# sudo systemctl enable bluetooth 
+# sudo systemctl enable fstrim
+# sudo systemctl enable seatd
 
 
 ##############################################################################

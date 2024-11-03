@@ -40,5 +40,20 @@ URL_FONTS=(
   "https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Meslo/S/Regular/MesloLGSNerdFontPropo-Regular.ttf"
 )
 
+URL_THEMES=(
+  "https://github.com/prasanthrangan/hyde-themes/tree/Catppuccin-Mocha"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Catppuccin-Latte"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Rose-Pine"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Tokyo-Night"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Material-Sakura"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Graphite-Mono"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Decay-Green"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Edge-Runner"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Frosted-Glass"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Gruvbox-Retro"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Synth-Wave"
+  "https://github.com/prasanthrangan/hyde-themes/tree/Nordic-Blue"
+)
+
 YAY="On"
 PARU="Off"
