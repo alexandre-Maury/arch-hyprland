@@ -102,15 +102,17 @@ done
 ## Themes Installation                                            
 ##############################################################################
 cd ~/.local/share/themes
-for url in "${URL_THEMES[@]}"; do
-  file_name=$(basename "$url")
-  if [ ! -f "$file_name" ]; then
-    log_prompt "INFO" && echo "Téléchargement de $file_name" && echo ""
-    curl -fLO "$url"
-  else
-    log_prompt "WARNING" && echo "$file_name existe déjà, themes ignoré" && echo ""
-  fi
-done
+# for url in "${URL_THEMES[@]}"; do
+#   file_name=$(basename "$url")
+#   if [ ! -f "$file_name" ]; then
+#     log_prompt "INFO" && echo "Téléchargement de $file_name" && echo ""
+#     curl -fLO "$url"
+#   else
+#     log_prompt "WARNING" && echo "$file_name existe déjà, themes ignoré" && echo ""
+#   fi
+# done
+
+git clone https://github.com/HyDE-Project/hyde-gallery.git
 
 ##############################################################################
 ## Icons Installation                                            
