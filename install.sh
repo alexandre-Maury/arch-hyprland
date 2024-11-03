@@ -343,6 +343,19 @@ cp -rf $SCRIPT_DIR/misc/dots/user/dolphinrc $HOME
 # sudo systemctl enable fstrim
 # sudo systemctl enable seatd
 
+# Chemin du dossier contenant les scripts
+dossier_scripts="$HOME/.local/share/bin"
+
+# Boucle sur tous les fichiers du dossier
+for fichier in "$dossier_scripts"/*; do
+  # Vérifie si le fichier est un fichier régulier (et non un dossier)
+  if [ -f "$fichier" ]; then
+    # Rend le fichier exécutable
+    chmod +x "$fichier"
+    echo "Le fichier $fichier est maintenant exécutable."
+  fi
+done
+
 
 ##############################################################################
 ## clean                                              
