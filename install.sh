@@ -78,7 +78,9 @@ if [[ "$PARU" == "On" ]]; then
     fi
 fi
 
-mkdir -p ~/.local/share/themes icons fonts
+mkdir -p ~/.local/share/themes
+mkdir -p ~/.local/share/icons
+mkdir -p ~/.local/share/fonts
 
 ##############################################################################
 ## Fonts Installation                                            
