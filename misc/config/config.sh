@@ -2,6 +2,24 @@
 
 # script config.sh
 
+# https://catppuccin.com/ports
+# https://github.com/catppuccin/fish
+# https://github.com/catppuccin/fzf/tree/main
+# https://github.com/catppuccin/hyprlock
+# https://github.com/catppuccin/kitty
+# https://github.com/catppuccin/rofi
+# https://github.com/catppuccin/qt5ct
+# https://github.com/catppuccin/obsidian
+# https://github.com/catppuccin/nvim
+# https://github.com/catppuccin/vim
+# https://github.com/catppuccin/vscode
+# https://github.com/catppuccin/vscode-icons
+# https://github.com/catppuccin/thunderbird
+# https://github.com/catppuccin/xresources
+# https://github.com/catppuccin/zsh-syntax-highlighting
+# https://github.com/catppuccin/zsh-fsh
+# https://github.com/catppuccin/waybar/tree/main
+
 ##############################################################################
 ## Config arch post-install                                                   
 ##############################################################################

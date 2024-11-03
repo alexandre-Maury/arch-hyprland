@@ -100,69 +100,105 @@ done
 ##############################################################################
 ## Themes Installation                                            
 ##############################################################################
-yay -S --noconfirm ttf-jetbrains-mono-nerd kvantum-theme-catppuccin-git
+# cd ~/.local/share/themes
 
-# https://github.com/brycewalkerdev/catppuccin-gtk
-yay -S --noconfirm catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
 
-# https://github.com/catppuccin/cursors
-yay -S --noconfirm catppuccin-cursors-latte catppuccin-cursors-frappe catppuccin-cursors-macchiato catppuccin-cursors-mocha
 
-# https://github.com/catppuccin/sddm
-yay -S --noconfirm qt6-svg qt6-declarative qt5-quickcontrols2 sddm-catppuccin-git
 
 ##############################################################################
-## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
+## Icons Installation                                            
 ##############################################################################
-git clone https://github.com/vinceliuice/Tela-circle-icon-theme $workDirName/Tela-circle-icon-theme
-cd $workDirName/Tela-circle-icon-theme
-chmod +x install.sh
-bash install.sh -a purple 
-cd ..
+# cd ~/.local/share/icons
 
 
 ##############################################################################
 ## Installation des utilitaires                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol fish kitty starship noto-fonts dolphin mako wofi qt5ct kvantum lxappearance which neofetch
-yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout
+# yay -S --needed --noconfirm --ask=4 curl tar wget cmake meson ninja gcc make cairo libzip librsvg tomlplusplus gdb pugixml gbm libdrm libpipewire sdbus-cpp \
+#     libjpeg-turbo libwebp pango pkgconf libglvnd udis-86 libxcb xcb-proto xcb-util xcb-util-keysyms wayland wayland-protocols scdoc \
+#     libxfixes libx11 libxcomposite xorg-xinput libxrender pixman libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info \
+#     cpio xcb-util-errors
 
-## hypridle                                       
-yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland 
+# yay -S --needed --noconfirm --ask=4 firefox \
+#     kitty \
+#     dolphin \
+#     ark \
+#     vim \
+#     code \
+#     alacritty \
+#     btop
 
-## hyprlock                                              
-yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland cairo libdrm pango libxkbcommon pam
-
-## xdg-desktop-portal-hyprland                                              
-yay -S --needed --noconfirm --ask=4 gbm hyprland-protocols libdrm libpipewire sdbus-cpp wayland-protocols
-
-## hyprpaper                                              
-yay -S --needed --noconfirm --ask=4 wayland wayland-protocols pango cairo libglvnd libjpeg-turbo libwebp gcc pkgconf 
-
-## aquamarine                                              
-yay -S --needed --noconfirm --ask=4 hwdata 
-
-## hyprcursor                                              
-yay -S --needed --noconfirm --ask=4 tomlplusplus librsvg libzip cairo
-
-## Hyprland 
-yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus xcb-util-errors
+# yay -S --needed --noconfirm --ask=4 nwg-look \
+#     qt5ct \
+#     qt6ct \
+#     kvantum \
+#     kvantum-qt5 \
+#     qt5-wayland \
+#     qt6-wayland                                  
 
 
-##############################################################################
-## hyprshot                                               
-##############################################################################
-git clone https://github.com/Gustash/hyprshot.git $workDirName/hyprshot
-cd $workDirName/hyprshot
-ln -s $(pwd)/Hyprshot/hyprshot $HOME/.local/bin
-chmod +x Hyprshot/hyprshot
+# yay -S --needed --noconfirm --ask=4 polkit-kde-agent \
+#     xdg-desktop-portal-hyprland \
+#     xdg-desktop-portal-gtk \
+#     pacman-contrib \
+#     python-pyamdgpuinfo \
+#     parallel \
+#     jq \
+#     imagemagick \
+#     qt5-imageformats \
+#     ffmpegthumbs \
+#     kde-cli-tools \
+#     libnotify
 
+# yay -S --needed --noconfirm --ask=4 dunst \
+#     rofi-wayland \
+#     waybar \
+#     swww \
+#     swaylock-effects-git \
+#     wlogout \
+#     grimblast-git \
+#     slurp \
+#     swappy \
+#     hyprpicker \
+#     cliphist
+#     # 
+#     # wl-clipboard
+
+# yay -S --needed --noconfirm --ask=4 seatd \
+#     glibc \
+#     pam  
+
+# yay -S --needed --noconfirm --ask=4 pipewire \
+#     pipewire-alsa \
+#     pipewire-audio \
+#     pipewire-jack \
+#     pipewire-pulse \
+#     gst-plugin-pipewire \
+#     wireplumber \
+#     pavucontrol \
+#     pamixer \
+#     networkmanager \
+#     network-manager-applet \
+#     bluez \
+#     bluez-utils \
+#     blueman \
+#     brightnessctl \
+#     cava \
+#     udiskie                                      
+    # iw wpa_supplicant alsa-utils alsa-plugins
+
+
+# yay -S sddm \                                              
+#     qt5-quickcontrols \                                    
+#     qt5-quickcontrols2 \                                   
+#     qt5-graphicaleffects                     
 
 ##############################################################################
 ## hyprutils                                              
 ##############################################################################
 log_prompt "INFO" && echo "Installation de hyprutils" && echo ""
+
 git clone --recursive https://github.com/hyprwm/hyprutils.git $workDirName/hyprutils
 cd $workDirName/hyprutils
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
@@ -170,21 +206,12 @@ cmake --build ./build --config Release --target all -j`nproc 2>/dev/null || getc
 sudo cmake --install ./build
 cd ..
 
-##############################################################################
-## hyprland-protocols                                          
-##############################################################################
-log_prompt "INFO" && echo "Installation de hyprland-protocols" && echo ""
-git clone --recursive https://github.com/hyprwm/hyprland-protocols.git $workDirName/hyprland-protocols
-cd $workDirName/hyprland-protocols
-meson setup build
-ninja -C build
-sudo ninja -C build install
-
 
 ##############################################################################
 ## hyprlang                                              
 ##############################################################################
 log_prompt "INFO" && echo "Installation de hyprlang" && echo ""
+
 git clone --recursive https://github.com/hyprwm/hyprlang.git $workDirName/hyprlang
 cd $workDirName/hyprlang
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
@@ -194,24 +221,14 @@ cd ..
 
 
 ##############################################################################
-## hypridle                                       
+## hyprcursor                                              
 ##############################################################################
-git clone --recursive https://github.com/hyprwm/hypridle.git $workDirName/hypridle
-cd $workDirName/hypridle
-cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -S . -B ./build
-cmake --build ./build --config Release --target hypridle -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
-sudo cmake --install ./build
-cd ..
+log_prompt "INFO" && echo "Installation de hyprcursor" && echo ""
 
-
-##############################################################################
-## hyprlock                                              
-##############################################################################
-log_prompt "INFO" && echo "Installation de hyprlock" && echo ""
-git clone --recursive https://github.com/hyprwm/hyprlock.git $workDirName/hyprlock
-cd $workDirName/hyprlock
+git clone --recursive https://github.com/hyprwm/hyprcursor.git $workDirName/hyprcursor
+cd $workDirName/hyprcursor
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
-cmake --build ./build --config Release --target hyprlock -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
+cmake --build ./build --config Release --target all -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
 sudo cmake --install ./build
 cd ..
 
@@ -219,6 +236,7 @@ cd ..
 ## hyprwayland-scanner                                              
 ##############################################################################
 log_prompt "INFO" && echo "Installation de hyprwayland-scanner" && echo ""
+
 git clone --recursive https://github.com/hyprwm/hyprwayland-scanner.git $workDirName/hyprwayland-scanner
 cd $workDirName/hyprwayland-scanner
 cmake -DCMAKE_INSTALL_PREFIX=/usr -B build
@@ -226,11 +244,23 @@ cmake --build build -j `nproc`
 sudo cmake --install build
 cd ..
 
+##############################################################################
+## hyprland-protocols                                          
+##############################################################################
+log_prompt "INFO" && echo "Installation de hyprland-protocols" && echo ""
+
+git clone --recursive https://github.com/hyprwm/hyprland-protocols.git $workDirName/hyprland-protocols
+cd $workDirName/hyprland-protocols
+meson setup build
+ninja -C build
+sudo ninja -C build install
 
 ##############################################################################
 ## xdg-desktop-portal-hyprland                                              
 ##############################################################################
 log_prompt "INFO" && echo "Installation de xdg-desktop-portal-hyprland" && echo ""
+# libpipewire-0.3 libspa-0.2 
+
 git clone --recursive https://github.com/hyprwm/xdg-desktop-portal-hyprland $workDirName/xdg-desktop-portal-hyprland
 cd $workDirName/xdg-desktop-portal-hyprland
 cmake -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib -DCMAKE_INSTALL_PREFIX=/usr -B build
@@ -240,20 +270,11 @@ cd ..
 
 
 ##############################################################################
-## hyprpaper                                              
-##############################################################################
-log_prompt "INFO" && echo "Installation de hyprpaper" && echo ""
-git clone --recursive https://github.com/hyprwm/hyprpaper.git $workDirName/hyprpaper
-cd $workDirName/hyprpaper
-cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
-cmake --build ./build --config Release --target hyprpaper -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
-sudo cmake --install ./build
-cd ..
-
-##############################################################################
 ## aquamarine                                              
 ##############################################################################
 log_prompt "INFO" && echo "Installation de aquamarine" && echo ""
+yay -S hwdata --noconfirm
+
 git clone --recursive https://github.com/hyprwm/aquamarine.git $workDirName/aquamarine
 cd $workDirName/aquamarine
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
@@ -261,15 +282,28 @@ cmake --build ./build --config Release --target all -j`nproc 2>/dev/null || getc
 sudo cmake --install ./build
 cd ..
 
+##############################################################################
+## hyprpaper                                              
+##############################################################################
+log_prompt "INFO" && echo "Installation de hyprpaper" && echo ""
+
+git clone --recursive https://github.com/hyprwm/hyprpaper.git $workDirName/hyprpaper
+cd $workDirName/hyprpaper
+cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
+cmake --build ./build --config Release --target hyprpaper -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
+sudo cmake --install ./build
+cd ..
+
 
 ##############################################################################
-## hyprcursor                                              
+## hyprlock                                              
 ##############################################################################
-log_prompt "INFO" && echo "Installation de hyprcursor" && echo ""
-git clone --recursive https://github.com/hyprwm/hyprcursor.git $workDirName/hyprcursor
-cd $workDirName/hyprcursor
+log_prompt "INFO" && echo "Installation de hyprlock" && echo ""
+
+git clone --recursive https://github.com/hyprwm/hyprlock.git $workDirName/hyprlock
+cd $workDirName/hyprlock
 cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
-cmake --build ./build --config Release --target all -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
+cmake --build ./build --config Release --target hyprlock -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
 sudo cmake --install ./build
 cd ..
 
@@ -278,6 +312,7 @@ cd ..
 ## Hyprland                                              
 ##############################################################################
 log_prompt "INFO" && echo "Installation de Hyprland" && echo ""
+
 git clone --recursive https://github.com/hyprwm/Hyprland $workDirName/Hyprland
 cd $workDirName/Hyprland
 make all && sudo make install
@@ -287,22 +322,34 @@ cd ..
 ##############################################################################
 ## Configuration                                              
 ##############################################################################
-kitty +kitten themes --reload-in=all Catppuccin-Mocha
+cp -rf $SCRIPT_DIR/misc/dots/.config $HOME
+cp -rf $SCRIPT_DIR/misc/dots/.local/share $HOME/.local
 
-xdg-mime default vim.desktop text/plain
-xdg-mime default org.kde.dolphin.desktop inode/directory
-xdg-mime default firefox.desktop x-scheme-handler/http
-xdg-mime default firefox.desktop x-scheme-handler/https
+cp -rf $SCRIPT_DIR/misc/dots/wallpaper $HOME
+cp -rf $SCRIPT_DIR/misc/dots/scripts $HOME
+cp -rf $SCRIPT_DIR/misc/dots/user/.gtkrc-2.0 $HOME 
 
-cp -rf $tmp/etc/environment /etc
-cp -rf $tmp/etc/sddm.conf /etc
-cp -rf $tmp/config/* ~/.config
 
 ##############################################################################
 ## Activation des services                                              
 ##############################################################################
-sudo systemctl enable sddm
-chsh -s $(which fish)
+# sudo systemctl enable bluetooth 
+# sudo systemctl enable fstrim
+# sudo systemctl enable seatd
+
+# Chemin du dossier contenant les scripts
+dossier_scripts="$HOME/.local/share/bin"
+
+# Boucle sur tous les fichiers du dossier
+for fichier in "$dossier_scripts"/*; do
+  # Vérifie si le fichier est un fichier régulier (et non un dossier)
+  if [ -f "$fichier" ]; then
+    # Rend le fichier exécutable
+    chmod +x "$fichier"
+    echo "Le fichier $fichier est maintenant exécutable."
+  fi
+done
+
 
 ##############################################################################
 ## clean                                              
