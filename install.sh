@@ -12,6 +12,8 @@ workDirName="${HOME}/buildHypr";
 rm -rf $workDirName
 mkdir -p $workDirName
 
+# 
+
 ##############################################################################
 ## Information Utilisateur                                              
 ##############################################################################
@@ -76,11 +78,12 @@ if [[ "$PARU" == "On" ]]; then
     fi
 fi
 
+mkdir -p ~/.local/share/themes icons fonts
+
 ##############################################################################
 ## Fonts Installation                                            
 ##############################################################################
-mkdir -p ~/.local/share/fonts && cd ~/.local/share/fonts
-
+cd ~/.local/share/fonts
 # Télécharger chaque fichier seulement s'il n'existe pas déjà
 for url in "${URL_FONTS[@]}"; do
   file_name=$(basename "$url")
@@ -92,12 +95,11 @@ for url in "${URL_FONTS[@]}"; do
   fi
 done
 
+
 ##############################################################################
 ## Themes Installation                                            
 ##############################################################################
-mkdir -p ~/.local/share/themes && cd ~/.local/share/themes
-
-# Télécharger chaque fichier seulement s'il n'existe pas déjà
+cd ~/.local/share/themes
 for url in "${URL_THEMES[@]}"; do
   file_name=$(basename "$url")
   if [ ! -f "$file_name" ]; then
@@ -111,7 +113,7 @@ done
 ##############################################################################
 ## Icons Installation                                            
 ##############################################################################
-mkdir -p ~/.local/share/icons 
+cd ~/.local/share/icons
 wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | THEMES='Yaru++ Yaru++-Dark' env DESTDIR="~/.local/share/icons" sh
 
 
@@ -121,29 +123,29 @@ wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh
 
 # https://github.com/Jannomag/Yaru-Colors/tree/master
 
-yay -S curl tar wget cmake meson ninja gcc make cairo libzip librsvg tomlplusplus gdb pugixml gbm libdrm libpipewire sdbus-cpp \
+yay -S --needed --noconfirm --ask=4 curl tar wget cmake meson ninja gcc make cairo libzip librsvg tomlplusplus gdb pugixml gbm libdrm libpipewire sdbus-cpp \
     libjpeg-turbo libwebp pango pkgconf libglvnd udis-86 libxcb xcb-proto xcb-util xcb-util-keysyms wayland wayland-protocols scdoc \
     libxfixes libx11 libxcomposite xorg-xinput libxrender pixman libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info \
-    cpio xcb-util-errors  --noconfirm
+    cpio xcb-util-errors
 
-yay -S firefox \
+yay -S --needed --noconfirm --ask=4 firefox \
     kitty \
     dolphin \
     ark \
     vim \
-    code --noconfirm                                          
+    code                                         
     # alacritty
 
-yay -S nwg-look \
+yay -S --needed --noconfirm --ask=4 nwg-look \
     qt5ct \
     qt6ct \
     kvantum \
     kvantum-qt5 \
     qt5-wayland \
-    qt6-wayland --noconfirm                                  
+    qt6-wayland                                  
 
 
-yay -S polkit-gnome \
+yay -S --needed --noconfirm --ask=4 polkit-gnome \
     xdg-desktop-portal-hyprland \
     xdg-desktop-portal-gtk \
     pacman-contrib \
@@ -154,9 +156,9 @@ yay -S polkit-gnome \
     qt5-imageformats \
     ffmpegthumbs \
     kde-cli-tools \
-    libnotify --noconfirm
+    libnotify
 
-yay -S dunst \
+yay -S --needed --noconfirm --ask=4 dunst \
     rofi-wayland \
     waybar \
     swww \
@@ -166,15 +168,15 @@ yay -S dunst \
     slurp \
     swappy \
     hyprpicker \
-    cliphist --noconfirm
+    cliphist
     # 
     # wl-clipboard
 
-yay -S seatd \
+yay -S --needed --noconfirm --ask=4 seatd \
     glibc \
-    pam  --noconfirm
+    pam  
 
-yay -S pipewire \
+yay -S --needed --noconfirm --ask=4 pipewire \
     pipewire-alsa \
     pipewire-audio \
     pipewire-jack \
@@ -190,14 +192,14 @@ yay -S pipewire \
     blueman \
     brightnessctl \
     cava \
-    udiskie --noconfirm                                      
+    udiskie                                      
     # iw wpa_supplicant alsa-utils alsa-plugins
 
 
 # yay -S sddm \                                              
 #     qt5-quickcontrols \                                    
 #     qt5-quickcontrols2 \                                   
-#     qt5-graphicaleffects --noconfirm                       
+#     qt5-graphicaleffects                     
 
 ##############################################################################
 ## hyprutils                                              
