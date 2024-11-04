@@ -287,15 +287,12 @@ cd ..
 ##############################################################################
 kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
-# xdg-mime default vim.desktop text/plain
-# xdg-mime default org.kde.dolphin.desktop inode/directory
-# xdg-mime default firefox.desktop x-scheme-handler/http
-# xdg-mime default firefox.desktop x-scheme-handler/https
+
 cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
 
 cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
 cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf/
-# cp -rf $SCRIPT_DIR/misc/dots/config/* ~/.config
+
 
 ##############################################################################
 ## Activation des services                                              
