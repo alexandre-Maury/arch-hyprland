@@ -104,7 +104,7 @@ yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-n
 yay -S --needed --noconfirm --ask=4 "${GTK}"
 yay -S --needed --noconfirm --ask=4 "${CURSORS}"
 yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
-yay -S --needed --noconfirm --ask=4 "${$SDDM}"
+yay -S --needed --noconfirm --ask=4 "${SDDM}"
 yay -S --needed --noconfirm --ask=4 "${ICONS}"
 
 ##############################################################################
