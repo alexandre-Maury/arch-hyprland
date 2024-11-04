@@ -81,7 +81,7 @@ fi
 ## Installation des utilitaires                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol fish kitty starship noto-fonts dolphin mako wofi kvantum lxappearance which neofetch
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako wofi kvantum lxappearance which neofetch
 yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout qt5ct qt6-svg qt6-declarative qt5-quickcontrols2
 
 ## hypridle                                       
@@ -301,7 +301,7 @@ cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf/
 ## Activation des services                                              
 ##############################################################################
 sudo systemctl enable sddm
-chsh -s $(which fish)
+
 
 ##############################################################################
 ## clean                                              
