@@ -77,6 +77,36 @@ if [[ "$PARU" == "On" ]]; then
     fi
 fi
 
+##############################################################################
+## Installation des utilitaires                                                 
+##############################################################################
+
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol fish kitty starship noto-fonts dolphin mako wofi kvantum lxappearance which neofetch
+yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout qt5ct qt6-svg qt6-declarative qt5-quickcontrols2
+
+## hypridle                                       
+yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland 
+
+## hyprlock                                              
+yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland cairo libdrm pango libxkbcommon pam
+
+## xdg-desktop-portal-hyprland                                              
+yay -S --needed --noconfirm --ask=4 gbm hyprland-protocols libdrm libpipewire sdbus-cpp wayland-protocols
+
+## hyprpaper                                              
+yay -S --needed --noconfirm --ask=4 wayland wayland-protocols pango cairo libglvnd libjpeg-turbo libwebp gcc pkgconf 
+
+## aquamarine                                              
+yay -S --needed --noconfirm --ask=4 hwdata 
+
+## hyprcursor                                              
+yay -S --needed --noconfirm --ask=4 tomlplusplus librsvg libzip cairo
+
+## Hyprland 
+yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus xcb-util-errors
+
+
+
 mkdir -p ~/.local/share/themes
 mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/fonts
@@ -100,7 +130,7 @@ done
 ##############################################################################
 ## Themes Installation                                            
 ##############################################################################
-yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-nerd qt6-svg qt6-declarative qt5-quickcontrols2
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-nerd 
 yay -S --needed --noconfirm --ask=4 "${GTK}"
 yay -S --needed --noconfirm --ask=4 "${CURSORS}"
 yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
@@ -115,36 +145,6 @@ yay -S --needed --noconfirm --ask=4 "${ICONS}"
 # chmod +x install.sh
 # bash install.sh -a 
 # cd ..
-
-
-##############################################################################
-## Installation des utilitaires                                                 
-##############################################################################
-
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol fish kitty starship noto-fonts dolphin mako wofi qt5ct kvantum lxappearance which neofetch
-yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout
-
-## hypridle                                       
-yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland 
-
-## hyprlock                                              
-yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland cairo libdrm pango libxkbcommon pam
-
-## xdg-desktop-portal-hyprland                                              
-yay -S --needed --noconfirm --ask=4 gbm hyprland-protocols libdrm libpipewire sdbus-cpp wayland-protocols
-
-## hyprpaper                                              
-yay -S --needed --noconfirm --ask=4 wayland wayland-protocols pango cairo libglvnd libjpeg-turbo libwebp gcc pkgconf 
-
-## aquamarine                                              
-yay -S --needed --noconfirm --ask=4 hwdata 
-
-## hyprcursor                                              
-yay -S --needed --noconfirm --ask=4 tomlplusplus librsvg libzip cairo
-
-## Hyprland 
-yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus xcb-util-errors
-
 
 ##############################################################################
 ## hyprshot                                               
