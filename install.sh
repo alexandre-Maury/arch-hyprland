@@ -28,13 +28,13 @@ log_prompt "SUCCESS" && echo "OK" && echo ""
 ##############################################################################
 ## arch-chroot Définir le fuseau horaire + local                                                  
 ##############################################################################
-log_prompt "INFO" && echo "Configuration du fuseau horaire"
-sudo timedatectl set-ntp true
-sudo timedatectl set-timezone ${REGION}/${CITY}
-sudo localectl set-locale LANG="${LANG}" LC_TIME="${LANG}"
-sudo hwclock --systohc --utc
-timedatectl status
-log_prompt "SUCCESS" && echo "OK" && echo ""
+# log_prompt "INFO" && echo "Configuration du fuseau horaire"
+# sudo timedatectl set-ntp true
+# sudo timedatectl set-timezone ${REGION}/${CITY}
+# sudo localectl set-locale LANG="${LANG}" LC_TIME="${LANG}"
+# sudo hwclock --systohc --utc
+# timedatectl status
+# log_prompt "SUCCESS" && echo "OK" && echo ""
 
 ##############################################################################
 ## Installation de YAY                                               
