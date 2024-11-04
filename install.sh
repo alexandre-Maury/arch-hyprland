@@ -105,11 +105,13 @@ yay -S --needed --noconfirm --ask=4 tomlplusplus librsvg libzip cairo
 ## Hyprland 
 yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus xcb-util-errors
 
-
+## hyprwayland-scanner 
+yay -S --needed --noconfirm --ask=4 pugixml
 
 mkdir -p ~/.local/share/themes
 mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/bin
 
 ##############################################################################
 ## Fonts Installation                                            
@@ -149,9 +151,9 @@ yay -S --needed --noconfirm --ask=4 "${ICONS}"
 ##############################################################################
 ## hyprshot                                               
 ##############################################################################
-mkdir -p ~/.config/Hyprshot && mkdir -p ~/.config/.local/bin
+mkdir -p ~/.config/Hyprshot 
 git clone https://github.com/Gustash/hyprshot.git ~/.config/Hyprshot
-ln -s ~/.config/Hyprshot/hyprshot $HOME/.local/bin/hyprshot
+ln -s ~/.config/Hyprshot/hyprshot $HOME/.local/bin
 chmod +x ~/.config/Hyprshot/hyprshot
 
 
