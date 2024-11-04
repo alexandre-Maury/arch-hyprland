@@ -60,10 +60,15 @@ URL_FONTS=(
   "https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Meslo/S/Regular/MesloLGSNerdFontPropo-Regular.ttf"
 )
 
-URL_THEMES=(
-  "https://github.com/catppuccin/hyprland.git"
-
-)
-
 YAY="On"
 PARU="Off"
+
+# https://github.com/brycewalkerdev/catppuccin-gtk
+# https://github.com/catppuccin/cursors
+# https://github.com/catppuccin/sddm
+
+GTK="catppuccin-gtk-theme-macchiato" # catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
+ICONS="catppuccin-icons-git"
+CURSORS="catppuccin-cursors-macchiato" # catppuccin-cursors-latte catppuccin-cursors-frappe catppuccin-cursors-macchiato catppuccin-cursors-mocha
+SDDM="sddm-catppuccin-git"
+KVANTUM="kvantum-theme-catppuccin-git"

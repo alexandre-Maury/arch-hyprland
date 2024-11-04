@@ -100,27 +100,21 @@ done
 ##############################################################################
 ## Themes Installation                                            
 ##############################################################################
-yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd kvantum-theme-catppuccin-git
-
-# https://github.com/brycewalkerdev/catppuccin-gtk
-yay -S --needed --noconfirm --ask=4 catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
-
-# https://github.com/catppuccin/cursors
-yay -S --needed --noconfirm --ask=4 catppuccin-cursors-latte catppuccin-cursors-frappe catppuccin-cursors-macchiato catppuccin-cursors-mocha
-
-# https://github.com/catppuccin/sddm
-yay -S --needed --noconfirm --ask=4 qt6-svg qt6-declarative qt5-quickcontrols2 sddm-catppuccin-git
-
-yay -S --needed --noconfirm --ask=4 catppuccin-icons-git
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-nerd qt6-svg qt6-declarative qt5-quickcontrols2
+yay -S --needed --noconfirm --ask=4 "${GTK}"
+yay -S --needed --noconfirm --ask=4 "${CURSORS}"
+yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
+yay -S --needed --noconfirm --ask=4 "${$SDDM}"
+yay -S --needed --noconfirm --ask=4 "${ICONS}"
 
 ##############################################################################
 ## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
 ##############################################################################
-git clone https://github.com/vinceliuice/Tela-icon-theme.git $workDirName/Tela-icon-theme
-cd $workDirName/Tela-icon-theme
-chmod +x install.sh
-bash install.sh -a 
-cd ..
+# git clone https://github.com/vinceliuice/Tela-icon-theme.git $workDirName/Tela-icon-theme
+# cd $workDirName/Tela-icon-theme
+# chmod +x install.sh
+# bash install.sh -a 
+# cd ..
 
 
 ##############################################################################
@@ -155,10 +149,10 @@ yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto x
 ##############################################################################
 ## hyprshot                                               
 ##############################################################################
-git clone https://github.com/Gustash/hyprshot.git $workDirName/hyprshot
-cd $workDirName/hyprshot
-ln -s $(pwd)/Hyprshot/hyprshot $HOME/.local/bin
-chmod +x Hyprshot/hyprshot
+mkdir -p ~/.config/Hyprshot
+git clone https://github.com/Gustash/hyprshot.git ~/.config/Hyprshot
+ln -s ~/.config/Hyprshot/hyprshot $HOME/.local/bin/hyprshot
+chmod +x ~/.config/Hyprshot/hyprshot
 
 
 ##############################################################################
