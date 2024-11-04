@@ -151,7 +151,7 @@ yay -S --needed --noconfirm --ask=4 "${ICONS}"
 ##############################################################################
 ## hyprshot                                               
 ##############################################################################
-mkdir -p ~/.config/Hyprshot 
+# mkdir -p ~/.config/Hyprshot 
 git clone https://github.com/Gustash/hyprshot.git ~/.config/Hyprshot
 ln -s ~/.config/Hyprshot/hyprshot $HOME/.local/bin
 chmod +x ~/.config/Hyprshot/hyprshot
