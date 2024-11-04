@@ -111,13 +111,15 @@ yay -S --needed --noconfirm --ask=4 catppuccin-cursors-latte catppuccin-cursors-
 # https://github.com/catppuccin/sddm
 yay -S --needed --noconfirm --ask=4 qt6-svg qt6-declarative qt5-quickcontrols2 sddm-catppuccin-git
 
+yay -S --needed --noconfirm --ask=4 catppuccin-icons-git
+
 ##############################################################################
 ## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
 ##############################################################################
-git clone https://github.com/vinceliuice/Tela-circle-icon-theme $workDirName/Tela-circle-icon-theme
-cd $workDirName/Tela-circle-icon-theme
+git clone https://github.com/vinceliuice/Tela-icon-theme.git $workDirName/Tela-icon-theme
+cd $workDirName/Tela-icon-theme
 chmod +x install.sh
-bash install.sh -a purple 
+bash install.sh -a 
 cd ..
 
 
