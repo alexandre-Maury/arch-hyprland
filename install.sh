@@ -149,7 +149,7 @@ yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto x
 ##############################################################################
 ## hyprshot                                               
 ##############################################################################
-mkdir -p ~/.config/Hyprshot
+mkdir -p ~/.config/Hyprshot && mkdir -p ~/.config/.local/bin
 git clone https://github.com/Gustash/hyprshot.git ~/.config/Hyprshot
 ln -s ~/.config/Hyprshot/hyprshot $HOME/.local/bin/hyprshot
 chmod +x ~/.config/Hyprshot/hyprshot
