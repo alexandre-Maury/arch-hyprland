@@ -20,6 +20,8 @@
 # https://github.com/catppuccin/zsh-fsh
 # https://github.com/catppuccin/waybar/tree/main
 
+# https://github.com/MrVivekRajan/Hypr-Dots/tree/Type-1
+
 ##############################################################################
 ## Config arch post-install                                                   
 ##############################################################################
