@@ -100,16 +100,16 @@ done
 ##############################################################################
 ## Themes Installation                                            
 ##############################################################################
-yay -S --noconfirm ttf-jetbrains-mono-nerd kvantum-theme-catppuccin-git
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd kvantum-theme-catppuccin-git
 
 # https://github.com/brycewalkerdev/catppuccin-gtk
-yay -S --noconfirm catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
+yay -S --needed --noconfirm --ask=4 catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
 
 # https://github.com/catppuccin/cursors
-yay -S --noconfirm catppuccin-cursors-latte catppuccin-cursors-frappe catppuccin-cursors-macchiato catppuccin-cursors-mocha
+yay -S --needed --noconfirm --ask=4 catppuccin-cursors-latte catppuccin-cursors-frappe catppuccin-cursors-macchiato catppuccin-cursors-mocha
 
 # https://github.com/catppuccin/sddm
-yay -S --noconfirm qt6-svg qt6-declarative qt5-quickcontrols2 sddm-catppuccin-git
+yay -S --needed --noconfirm --ask=4 qt6-svg qt6-declarative qt5-quickcontrols2 sddm-catppuccin-git
 
 ##############################################################################
 ## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
@@ -294,9 +294,9 @@ xdg-mime default org.kde.dolphin.desktop inode/directory
 xdg-mime default firefox.desktop x-scheme-handler/http
 xdg-mime default firefox.desktop x-scheme-handler/https
 
-cp -rf $tmp/etc/environment /etc
-cp -rf $tmp/etc/sddm.conf /etc
-cp -rf $tmp/config/* ~/.config
+cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
+cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf/
+# cp -rf $SCRIPT_DIR/misc/dots/config/* ~/.config
 
 ##############################################################################
 ## Activation des services                                              
