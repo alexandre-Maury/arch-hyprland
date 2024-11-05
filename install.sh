@@ -153,10 +153,10 @@ mkdir -p $workDirName
 ##############################################################################
 ## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         
 ##############################################################################
-curl -L "$SDDM" -o "$workDirName/catppuccin/catppuccin.zip"
-unzip -q "$workDirName/catppuccin/catppuccin.zip" -d "$workDirName/catppuccin/${SDDM_THEME_NAME}"
-sudo cp -rf "$workDirName/catppuccin/${SDDM_THEME_NAME} /usr/share/sddm/themes"
-sudo touch "/etc/sddm.conf"
+wget ${SDDM} -O $workDirName/catppuccin.zip
+sudo mkdir -p /usr/share/sddm/themes/${SDDM_THEME_NAME}
+sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes/${SDDM_THEME_NAME}
+
 sudo echo "[Theme]" >> "/etc/sddm.conf"
 sudo echo "Current=${SDDM_THEME_NAME}" >> "/etc/sddm.conf"
 
