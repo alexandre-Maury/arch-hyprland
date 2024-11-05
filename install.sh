@@ -156,16 +156,12 @@ yay -S --needed --noconfirm --ask=4 "${ICONS}"
 sudo curl -L "$SDDM" -o "/usr/share/sddm/themes/catppuccin.zip"
 sudo unzip -q "/usr/share/sddm/themes/catppuccin.zip" -d "/usr/share/sddm/themes"
 sudo rm -rf "/usr/share/sddm/themes/catppuccin.zip"
+sudo touch "/etc/sddm.conf"
+sudo echo "
+  [Theme]
+  Current=${SDDM_THEME_NAME}
+" >> "/etc/sddm.conf"
 
-if [ ! -f "/etc/sddm.conf" ]; then
-    echo "Fichier de configuration SDDM non trouvé. Création du fichier..."
-    sudo touch "/etc/sddm.conf"
-fi
-
-sudo cat <<EOL > "/etc/sddm.conf"
-[Theme]
-Current=${SDDM_THEME_NAME}
-EOL
 
 ##############################################################################
 ## hyprshot                                               
