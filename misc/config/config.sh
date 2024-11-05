@@ -70,5 +70,10 @@ PARU="Off"
 GTK="catppuccin-gtk-theme-macchiato" # catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
 ICONS="catppuccin-icons-git"
 CURSORS="catppuccin-cursors-macchiato" # catppuccin-cursors-latte catppuccin-cursors-frappe catppuccin-cursors-macchiato catppuccin-cursors-mocha
-SDDM="sddm-catppuccin-git"
 KVANTUM="kvantum-theme-catppuccin-git"
+SDDM="https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip"
+SDDM_THEME_NAME="catppuccin-macchiato"
+# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-frappe.zip
+# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-latte.zip
+# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip
+# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip

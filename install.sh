@@ -82,7 +82,10 @@ fi
 ##############################################################################
 
 yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako wofi kvantum lxappearance which neofetch
-yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout qt5ct qt6-svg qt6-declarative qt5-quickcontrols2
+yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout unzip qt5ct qt6ct          
+
+## sddm
+yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
 
 ## hypridle                                       
 yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland 
@@ -136,7 +139,6 @@ yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-n
 yay -S --needed --noconfirm --ask=4 "${GTK}"
 yay -S --needed --noconfirm --ask=4 "${CURSORS}"
 yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
-yay -S --needed --noconfirm --ask=4 "${SDDM}"
 yay -S --needed --noconfirm --ask=4 "${ICONS}"
 
 ##############################################################################
@@ -147,6 +149,23 @@ yay -S --needed --noconfirm --ask=4 "${ICONS}"
 # chmod +x install.sh
 # bash install.sh -a 
 # cd ..
+
+##############################################################################
+## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         
+##############################################################################
+curl -L "$SDDM" -o "/usr/share/sddm/themes/catppuccin.zip"
+unzip -q "/usr/share/sddm/themes/catppuccin.zip" -d "/usr/share/sddm/themes"
+rm -rf "/usr/share/sddm/themes/catppuccin.zip"
+
+if [ ! -f "/etc/sddm.conf" ]; then
+    echo "Fichier de configuration SDDM non trouvé. Création du fichier..."
+    touch "/etc/sddm.conf"
+fi
+
+cat <<EOL > "/etc/sddm.conf"
+[Theme]
+Current=${SDDM_THEME_NAME}
+EOL
 
 ##############################################################################
 ## hyprshot                                               
