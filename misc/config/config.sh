@@ -77,5 +77,5 @@ KVANTUM="kvantum-theme-catppuccin-git"
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip
 SDDM="https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip"
-SDDM_THEME_NAME="catppuccin-macchiato"
+SDDM_THEME_NAME="catppuccin-macchiato" # Penser à modifier dans : $SCRIPT_DIR/misc/dots/etc/sddm.conf
 

@@ -13,152 +13,149 @@ workDirName="${HOME}/buildHypr";
 rm -rf $workDirName
 mkdir -p $workDirName
 
-# ##############################################################################
-# ## Information Utilisateur                                              
-# ##############################################################################
-# log_prompt "INFO" && read -p "Quel est votre nom d'utilisateur : " USER && echo ""
+##############################################################################
+## Information Utilisateur                                              
+##############################################################################
+log_prompt "INFO" && read -p "Quel est votre nom d'utilisateur : " USER && echo ""
 
-# ##############################################################################
-# ## Mise à jour du système                                                 
-# ##############################################################################
-# log_prompt "INFO" && echo "Mise à jour du système "
-# sudo pacman -Syyu --noconfirm
-# log_prompt "SUCCESS" && echo "OK" && echo ""
+##############################################################################
+## Mise à jour du système                                                 
+##############################################################################
+log_prompt "INFO" && echo "Mise à jour du système "
+sudo pacman -Syyu --noconfirm
+log_prompt "SUCCESS" && echo "OK" && echo ""
 
-# ##############################################################################
-# ## arch-chroot Définir le fuseau horaire + local                                                  
-# ##############################################################################
-# log_prompt "INFO" && echo "Configuration du fuseau horaire"
-# sudo timedatectl set-ntp true
-# sudo timedatectl set-timezone ${REGION}/${CITY}
-# sudo localectl set-locale LANG="${LANG}" LC_TIME="${LANG}"
-# sudo hwclock --systohc --utc
-# timedatectl status
-# log_prompt "SUCCESS" && echo "OK" && echo ""
+##############################################################################
+## arch-chroot Définir le fuseau horaire + local                                                  
+##############################################################################
+log_prompt "INFO" && echo "Configuration du fuseau horaire"
+sudo timedatectl set-ntp true
+sudo timedatectl set-timezone ${REGION}/${CITY}
+sudo localectl set-locale LANG="${LANG}" LC_TIME="${LANG}"
+sudo hwclock --systohc --utc
+timedatectl status
+log_prompt "SUCCESS" && echo "OK" && echo ""
 
-# ##############################################################################
-# ## Installation de YAY                                               
-# ##############################################################################
-# if [[ "$YAY" == "On" ]]; then
-#     if ! command -v yay &> /dev/null; then
-#         log_prompt "INFO" && echo "Installation de YAY" && echo ""
-#         git clone https://aur.archlinux.org/yay-bin.git $workDirName/yay-bin
-#         cd $workDirName/yay-bin || exit
-#         makepkg -si --noconfirm && cd .. 
-#         log_prompt "SUCCESS" && echo "Terminée" && echo ""
+##############################################################################
+## Installation de YAY                                               
+##############################################################################
+if [[ "$YAY" == "On" ]]; then
+    if ! command -v yay &> /dev/null; then
+        log_prompt "INFO" && echo "Installation de YAY" && echo ""
+        git clone https://aur.archlinux.org/yay-bin.git $workDirName/yay-bin
+        cd $workDirName/yay-bin || exit
+        makepkg -si --noconfirm && cd .. 
+        log_prompt "SUCCESS" && echo "Terminée" && echo ""
 
-#         # Generate yay database
-#         yay -Y --gendb
+        # Generate yay database
+        yay -Y --gendb
 
-#         # Update the system and AUR packages, including development packages
-#         yay -Syu --devel --noconfirm
+        # Update the system and AUR packages, including development packages
+        yay -Syu --devel --noconfirm
 
-#         # Save the current development packages
-#         yay -Y --devel --save
+        # Save the current development packages
+        yay -Y --devel --save
 
-#     else
-#         log_prompt "WARNING" && echo "YAY est déja installé" && echo ""
-#     fi
-# fi
+    else
+        log_prompt "WARNING" && echo "YAY est déja installé" && echo ""
+    fi
+fi
 
-# ##############################################################################
-# ## Installation de PARU                                                 
-# ##############################################################################
-# if [[ "$PARU" == "On" ]]; then
-#     if ! command -v paru &> /dev/null; then
-#         log_prompt "INFO" && echo "Installation de PARU" && echo ""
-#         git clone https://aur.archlinux.org/paru.git $workDirName/paru
-#         cd $workDirName/paru || exit
-#         makepkg -si --noconfirm && cd .. 
-#         log_prompt "SUCCESS" && echo "Terminée" && echo ""
+##############################################################################
+## Installation de PARU                                                 
+##############################################################################
+if [[ "$PARU" == "On" ]]; then
+    if ! command -v paru &> /dev/null; then
+        log_prompt "INFO" && echo "Installation de PARU" && echo ""
+        git clone https://aur.archlinux.org/paru.git $workDirName/paru
+        cd $workDirName/paru || exit
+        makepkg -si --noconfirm && cd .. 
+        log_prompt "SUCCESS" && echo "Terminée" && echo ""
 
-#     else
-#         log_prompt "WARNING" && echo "PARU est déja installé" && echo ""
-#     fi
-# fi
+    else
+        log_prompt "WARNING" && echo "PARU est déja installé" && echo ""
+    fi
+fi
 
-# ##############################################################################
-# ## Installation des utilitaires                                                 
-# ##############################################################################
+##############################################################################
+## Installation des utilitaires                                                 
+##############################################################################
 
-# yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako wofi kvantum lxappearance which neofetch
-# yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout unzip qt5ct qt6ct          
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako wofi kvantum lxappearance which neofetch
+yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout unzip qt5ct qt6ct          
 
-# ## sddm
-# yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
+## sddm
+yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
 
-# ## hypridle                                       
-# yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland 
+## hypridle                                       
+yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland 
 
-# ## hyprlock                                              
-# yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland cairo libdrm pango libxkbcommon pam
+## hyprlock                                              
+yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland cairo libdrm pango libxkbcommon pam
 
-# ## xdg-desktop-portal-hyprland                                              
-# yay -S --needed --noconfirm --ask=4 gbm hyprland-protocols libdrm libpipewire sdbus-cpp wayland-protocols
+## xdg-desktop-portal-hyprland                                              
+yay -S --needed --noconfirm --ask=4 gbm hyprland-protocols libdrm libpipewire sdbus-cpp wayland-protocols
 
-# ## hyprpaper                                              
-# yay -S --needed --noconfirm --ask=4 wayland wayland-protocols pango cairo libglvnd libjpeg-turbo libwebp gcc pkgconf 
+## hyprpaper                                              
+yay -S --needed --noconfirm --ask=4 wayland wayland-protocols pango cairo libglvnd libjpeg-turbo libwebp gcc pkgconf 
 
-# ## aquamarine                                              
-# yay -S --needed --noconfirm --ask=4 hwdata 
+## aquamarine                                              
+yay -S --needed --noconfirm --ask=4 hwdata 
 
-# ## hyprcursor                                              
-# yay -S --needed --noconfirm --ask=4 tomlplusplus librsvg libzip cairo
+## hyprcursor                                              
+yay -S --needed --noconfirm --ask=4 tomlplusplus librsvg libzip cairo
 
-# ## Hyprland 
-# yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus xcb-util-errors
+## Hyprland 
+yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus xcb-util-errors
 
-# ## hyprwayland-scanner 
-# yay -S --needed --noconfirm --ask=4 pugixml
+## hyprwayland-scanner 
+yay -S --needed --noconfirm --ask=4 pugixml
 
-# mkdir -p ~/.local/share/themes
-# mkdir -p ~/.local/share/icons
-# mkdir -p ~/.local/share/fonts
-# mkdir -p ~/.local/bin
+mkdir -p ~/.local/share/themes
+mkdir -p ~/.local/share/icons
+mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/bin
 
-# ##############################################################################
-# ## Fonts Installation                                            
-# ##############################################################################
-# cd ~/.local/share/fonts
-# # Télécharger chaque fichier seulement s'il n'existe pas déjà
-# for url in "${URL_FONTS[@]}"; do
-#   file_name=$(basename "$url")
-#   if [ ! -f "$file_name" ]; then
-#     log_prompt "INFO" && echo "Téléchargement de $file_name" && echo ""
-#     curl -fLO "$url"
-#   else
-#     log_prompt "WARNING" && echo "$file_name existe déjà, fonts ignoré" && echo ""
-#   fi
-# done
+##############################################################################
+## Fonts Installation                                            
+##############################################################################
+cd ~/.local/share/fonts
+# Télécharger chaque fichier seulement s'il n'existe pas déjà
+for url in "${URL_FONTS[@]}"; do
+  file_name=$(basename "$url")
+  if [ ! -f "$file_name" ]; then
+    log_prompt "INFO" && echo "Téléchargement de $file_name" && echo ""
+    curl -fLO "$url"
+  else
+    log_prompt "WARNING" && echo "$file_name existe déjà, fonts ignoré" && echo ""
+  fi
+done
 
 
-# ##############################################################################
-# ## Themes Installation                                            
-# ##############################################################################
-# yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-nerd 
-# yay -S --needed --noconfirm --ask=4 "${GTK}"
-# yay -S --needed --noconfirm --ask=4 "${CURSORS}"
-# yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
-# yay -S --needed --noconfirm --ask=4 "${ICONS}"
+##############################################################################
+## Themes Installation                                            
+##############################################################################
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-nerd 
+yay -S --needed --noconfirm --ask=4 "${GTK}"
+yay -S --needed --noconfirm --ask=4 "${CURSORS}"
+yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
+yay -S --needed --noconfirm --ask=4 "${ICONS}"
 
-# ##############################################################################
-# ## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
-# ##############################################################################
-# # git clone https://github.com/vinceliuice/Tela-icon-theme.git $workDirName/Tela-icon-theme
-# # cd $workDirName/Tela-icon-theme
-# # chmod +x install.sh
-# # bash install.sh -a 
-# # cd ..
+##############################################################################
+## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
+##############################################################################
+# git clone https://github.com/vinceliuice/Tela-icon-theme.git $workDirName/Tela-icon-theme
+# cd $workDirName/Tela-icon-theme
+# chmod +x install.sh
+# bash install.sh -a 
+# cd ..
 
 ##############################################################################
 ## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         
 ##############################################################################
 wget ${SDDM} -O $workDirName/catppuccin.zip
 sudo mkdir -p /usr/share/sddm/themes/${SDDM_THEME_NAME}
-sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes/${SDDM_THEME_NAME}
-
-sudo echo "[Theme]" >> "/etc/sddm.conf"
-sudo echo "Current=${SDDM_THEME_NAME}" >> "/etc/sddm.conf"
+sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes
 
 
 ##############################################################################
@@ -303,7 +300,7 @@ cd ..
 
 cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
 
-sudo cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
+# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
 sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
 
