@@ -153,16 +153,16 @@ yay -S --needed --noconfirm --ask=4 "${ICONS}"
 ##############################################################################
 ## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         
 ##############################################################################
-curl -L "$SDDM" -o "/usr/share/sddm/themes/catppuccin.zip"
-unzip -q "/usr/share/sddm/themes/catppuccin.zip" -d "/usr/share/sddm/themes"
-rm -rf "/usr/share/sddm/themes/catppuccin.zip"
+sudo curl -L "$SDDM" -o "/usr/share/sddm/themes/catppuccin.zip"
+sudo unzip -q "/usr/share/sddm/themes/catppuccin.zip" -d "/usr/share/sddm/themes"
+sudo rm -rf "/usr/share/sddm/themes/catppuccin.zip"
 
 if [ ! -f "/etc/sddm.conf" ]; then
     echo "Fichier de configuration SDDM non trouvé. Création du fichier..."
-    touch "/etc/sddm.conf"
+    sudo touch "/etc/sddm.conf"
 fi
 
-cat <<EOL > "/etc/sddm.conf"
+sudo cat <<EOL > "/etc/sddm.conf"
 [Theme]
 Current=${SDDM_THEME_NAME}
 EOL
