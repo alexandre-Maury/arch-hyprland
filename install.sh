@@ -28,13 +28,13 @@ log_prompt "SUCCESS" && echo "OK" && echo ""
 ##############################################################################
 ## arch-chroot Définir le fuseau horaire + local                                                  
 ##############################################################################
-# log_prompt "INFO" && echo "Configuration du fuseau horaire"
-# sudo timedatectl set-ntp true
-# sudo timedatectl set-timezone ${REGION}/${CITY}
-# sudo localectl set-locale LANG="${LANG}" LC_TIME="${LANG}"
-# sudo hwclock --systohc --utc
-# timedatectl status
-# log_prompt "SUCCESS" && echo "OK" && echo ""
+log_prompt "INFO" && echo "Configuration du fuseau horaire"
+sudo timedatectl set-ntp true
+sudo timedatectl set-timezone ${REGION}/${CITY}
+sudo localectl set-locale LANG="${LANG}" LC_TIME="${LANG}"
+sudo hwclock --systohc --utc
+timedatectl status
+log_prompt "SUCCESS" && echo "OK" && echo ""
 
 ##############################################################################
 ## Installation de YAY                                               
@@ -285,13 +285,13 @@ cd ..
 ##############################################################################
 ## Configuration                                              
 ##############################################################################
-kitty +kitten themes --reload-in=all Catppuccin-Mocha
+# kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
 
 cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
 
-cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
-cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf/
+sudo cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
+sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
 
 ##############################################################################
