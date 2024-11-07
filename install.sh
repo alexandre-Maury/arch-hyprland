@@ -1,10 +1,16 @@
 #!/usr/bin/bash
 
-# TEST / https://github.com/EliverLara/Shades-of-purple-gtk
-# https://github.com/cybergaz/hyprland_rice?tab=readme-ov-file
-# https://github.com/ChrisTitusTech/ArchTitus/tree/main
-# https://www.youtube.com/watch?v=qU6iDx4xB5o
-# https://github.com/SirEthanator/Hyprland-Dots/blob/main/install.sh
+# GTK --
+# https://www.youtube.com/watch?v=qU6iDx4xB5o --> MODIFIER GTK
+# https://github.com/EliverLara/Shades-of-purple-gtk
+# https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme --> A VOIR ABSOLUMENT
+
+# THEMES --
+# https://github.com/SirEthanator/Hyprland-Dots/tree/main --> PRIORITAIRE
+# 
+# https://github.com/rose-pine/cursor
+# https://github.com/catppuccin/papirus-folders
+# https://github.com/adi1090x/rofi
 
 set -e  # Quitte immédiatement en cas d'erreur.
 
