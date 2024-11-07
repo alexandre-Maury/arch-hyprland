@@ -91,11 +91,11 @@ if [[ "$PARU" == "On" ]]; then
 fi
 
 ##############################################################################
-## Installation des utilitaires                                                 
+## Installation des utilitaires (libnotify)                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako wofi kvantum lxappearance which neofetch
-yay -S --needed --noconfirm --ask=4 libnotify wl-clipboard slurp grim jq swww wlogout unzip qt5ct qt6ct          
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako lxappearance which neofetch
+yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync          
 
 ## sddm
 yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
