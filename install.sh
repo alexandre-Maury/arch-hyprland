@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+###################################################################################
 # GTK --
 # https://www.youtube.com/watch?v=qU6iDx4xB5o --> MODIFIER GTK
 # https://github.com/EliverLara/Shades-of-purple-gtk
@@ -11,6 +12,7 @@
 # https://github.com/rose-pine/cursor
 # https://github.com/catppuccin/papirus-folders
 # https://github.com/adi1090x/rofi
+###################################################################################
 
 set -e  # Quitte immédiatement en cas d'erreur.
 
