@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# TEST
 
 set -e  # Quitte immédiatement en cas d'erreur.
 
