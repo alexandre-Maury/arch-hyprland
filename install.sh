@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-# TEST
+# TEST / https://github.com/EliverLara/Shades-of-purple-gtk
+# https://github.com/ChrisTitusTech/ArchTitus/tree/main
 
 set -e  # Quitte immédiatement en cas d'erreur.
 
