@@ -95,7 +95,7 @@ fi
 ##############################################################################
 
 yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako lxappearance which neofetch
-yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync          
+yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync ocean-sound-theme         
 
 ## sddm
 yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
@@ -314,13 +314,13 @@ cd ..
 cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
 
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
-sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
+# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
 
 ##############################################################################
 ## Activation des services                                              
 ##############################################################################
-sudo systemctl enable sddm
+# sudo systemctl enable sddm
 
 
 ##############################################################################
