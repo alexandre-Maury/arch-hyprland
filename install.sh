@@ -3,6 +3,8 @@
 # TEST / https://github.com/EliverLara/Shades-of-purple-gtk
 # https://github.com/cybergaz/hyprland_rice?tab=readme-ov-file
 # https://github.com/ChrisTitusTech/ArchTitus/tree/main
+# https://www.youtube.com/watch?v=qU6iDx4xB5o
+# https://github.com/SirEthanator/Hyprland-Dots/blob/main/install.sh
 
 set -e  # Quitte immédiatement en cas d'erreur.
 
