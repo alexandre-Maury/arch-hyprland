@@ -57,26 +57,24 @@ log_prompt "SUCCESS" && echo "OK" && echo ""
 ##############################################################################
 ## Installation de YAY                                               
 ##############################################################################
-if [[ "$YAY" == "On" ]]; then
-    if ! command -v yay &> /dev/null; then
-        log_prompt "INFO" && echo "Installation de YAY" && echo ""
-        git clone https://aur.archlinux.org/yay-bin.git $workDirName/yay-bin
-        cd $workDirName/yay-bin || exit
-        makepkg -si --noconfirm && cd .. 
-        log_prompt "SUCCESS" && echo "Terminée" && echo ""
+if ! command -v yay &> /dev/null; then
+    log_prompt "INFO" && echo "Installation de YAY" && echo ""
+    git clone https://aur.archlinux.org/yay-bin.git $workDirName/yay-bin
+    cd $workDirName/yay-bin || exit
+    makepkg -si --noconfirm && cd .. 
+    log_prompt "SUCCESS" && echo "Terminée" && echo ""
 
-        # Generate yay database
-        yay -Y --gendb
+    # Generate yay database
+    yay -Y --gendb
 
-        # Update the system and AUR packages, including development packages
-        yay -Syu --devel --noconfirm
+    # Update the system and AUR packages, including development packages
+    yay -Syu --devel --noconfirm
 
-        # Save the current development packages
-        yay -Y --devel --save
+    # Save the current development packages
+    yay -Y --devel --save
 
-    else
-        log_prompt "WARNING" && echo "YAY est déja installé" && echo ""
-    fi
+else
+    log_prompt "WARNING" && echo "YAY est déja installé" && echo ""
 fi
 
 ##############################################################################
