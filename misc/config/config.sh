@@ -60,7 +60,6 @@ URL_FONTS=(
   "https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Meslo/S/Regular/MesloLGSNerdFontPropo-Regular.ttf"
 )
 
-YAY="On"
 PARU="Off"
 
 # https://github.com/brycewalkerdev/catppuccin-gtk

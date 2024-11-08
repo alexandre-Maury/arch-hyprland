@@ -37,13 +37,6 @@ mkdir -p ~/.local/bin
 log_prompt "INFO" && read -p "Quel est votre nom d'utilisateur : " USER && echo ""
 
 ##############################################################################
-## Mise à jour du système                                                 
-##############################################################################
-log_prompt "INFO" && echo "Mise à jour du système "
-sudo pacman -Syyu --noconfirm
-log_prompt "SUCCESS" && echo "OK" && echo ""
-
-##############################################################################
 ## arch-chroot Définir le fuseau horaire + local                                                  
 ##############################################################################
 log_prompt "INFO" && echo "Configuration du fuseau horaire"
@@ -63,19 +56,13 @@ if ! command -v yay &> /dev/null; then
     cd $workDirName/yay-bin || exit
     makepkg -si --noconfirm && cd .. 
     log_prompt "SUCCESS" && echo "Terminée" && echo ""
-
-    # Generate yay database
-    yay -Y --gendb
-
-    # Update the system and AUR packages, including development packages
-    yay -Syu --devel --noconfirm
-
-    # Save the current development packages
-    yay -Y --devel --save
-
 else
     log_prompt "WARNING" && echo "YAY est déja installé" && echo ""
 fi
+
+yay -Y --gendb
+yay -Syu --devel --noconfirm
+yay -Y --devel --save
 
 ##############################################################################
 ## Installation de PARU                                                 
