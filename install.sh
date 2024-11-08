@@ -167,9 +167,9 @@ done
 ##############################################################################
 ## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         
 ##############################################################################
-wget ${SDDM} -O $workDirName/catppuccin.zip
-sudo mkdir -p /usr/share/sddm/themes/${SDDM_THEME_NAME}
-sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes
+# wget ${SDDM} -O $workDirName/catppuccin.zip
+# sudo mkdir -p /usr/share/sddm/themes/${SDDM_THEME_NAME}
+# sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes
 
 
 ##############################################################################
