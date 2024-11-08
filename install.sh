@@ -311,8 +311,7 @@ cd ..
 # kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
 
-cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
-
+# cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
