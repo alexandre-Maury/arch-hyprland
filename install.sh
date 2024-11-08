@@ -24,7 +24,12 @@ source $SCRIPT_DIR/misc/scripts/functions.sh  # Charge les fonctions définies d
 # WORK IN TEMP DIR
 workDirName="${HOME}/buildHypr";
 rm -rf $workDirName
+
 mkdir -p $workDirName
+mkdir -p ~/.local/share/themes
+mkdir -p ~/.local/share/icons
+mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/bin
 
 ##############################################################################
 ## Information Utilisateur                                              
@@ -124,11 +129,6 @@ yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto x
 
 ## hyprwayland-scanner 
 yay -S --needed --noconfirm --ask=4 pugixml
-
-mkdir -p ~/.local/share/themes
-mkdir -p ~/.local/share/icons
-mkdir -p ~/.local/share/fonts
-mkdir -p ~/.local/bin
 
 ##############################################################################
 ## Fonts Installation                                            
