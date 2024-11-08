@@ -94,8 +94,9 @@ fi
 ## Installation des utilitaires (libnotify)                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship noto-fonts dolphin mako lxappearance which neofetch
-yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync ocean-sound-theme         
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship dolphin mako lxappearance which neofetch
+yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync         
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts
 
 ## sddm
 yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
@@ -148,7 +149,7 @@ done
 ##############################################################################
 ## Themes Installation                                            
 ##############################################################################
-yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ttf-jetbrains-mono-nerd 
+
 yay -S --needed --noconfirm --ask=4 "${GTK}"
 yay -S --needed --noconfirm --ask=4 "${CURSORS}"
 yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
