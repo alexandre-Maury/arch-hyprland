@@ -150,10 +150,10 @@ done
 ## Themes Installation                                            
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 "${GTK}"
-yay -S --needed --noconfirm --ask=4 "${CURSORS}"
-yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
-yay -S --needed --noconfirm --ask=4 "${ICONS}"
+# yay -S --needed --noconfirm --ask=4 "${GTK}"
+# yay -S --needed --noconfirm --ask=4 "${CURSORS}"
+# yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
+# yay -S --needed --noconfirm --ask=4 "${ICONS}"
 
 ##############################################################################
 ## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
