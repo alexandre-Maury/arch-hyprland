@@ -364,5 +364,5 @@ cp -rf Scripts ~/
 ## clean                                              
 ##############################################################################
 cd ..
-rm -rf $workDirName
+# rm -rf $workDirName
 log_prompt "SUCCESS" && echo "Installation de Hyprland terminé redémarrer votre systeme" && echo ""
