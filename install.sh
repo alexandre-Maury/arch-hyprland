@@ -83,10 +83,10 @@ if [[ "$PARU" == "On" ]]; then
 fi
 
 ##############################################################################
-## Installation des utilitaires (libnotify)                                                 
+## Installation des utilitaires (libnotify - mako)                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop kitty starship dolphin mako lxappearance which neofetch macchina yad rustup 
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop kitty starship dolphin lxappearance which neofetch macchina yad rustup 
 yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire-jack pamixer pavucontrol pulseaudio         
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts
 
