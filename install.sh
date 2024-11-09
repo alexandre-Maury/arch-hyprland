@@ -335,20 +335,20 @@ cp -rf .themes/Rose-Pine-xhdpi ~/.local/share/themes
 
 cp -rf .icons/catppuccin-cursors ~/.local/share/icons
 cp -rf .icons/catppuccin-cursors-light ~/.local/share/icons
-cp -rf .icons/Rose-Pine ~/.local/share/icons
 cp -rf .icons/rose-pine-cursors ~/.local/share/icons
 cp -rf .icons/rose-pine-cursors-light ~/.local/share/icons
+
+# cp -rf .icons/Rose-Pine ~/.local/share/icons
 
 cp -rf Scripts ~/
 
 
+chmod +x $HOME/.config/waybar/scripts/*
+chmod +x $HOME/.config/hypr/scripts/*
+chmod +x $HOME/.local/bin/*
+chmod +x $HOME/Scripts/*
 
 
-
-
-
-
-# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
 # kitty +kitten themes --reload-in=all Catppuccin-Mocha
