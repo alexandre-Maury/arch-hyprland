@@ -308,12 +308,50 @@ cd ..
 ##############################################################################
 ## Configuration                                              
 ##############################################################################
-# kitty +kitten themes --reload-in=all Catppuccin-Mocha
+log_prompt "INFO" && echo "Installation de Hyprland" && echo ""
+git clone --recursive https://github.com/alexandre-Maury/dotfiles.git $workDirName/dotfiles
+cd $workDirName/dotfiles
+
+cp -rf .config/cava ~/.config
+cp -rf .config/hypr ~/.config
+cp -rf .config/kitty ~/.config
+cp -rf .config/Kvantum ~/.config
+cp -rf .config/macchina ~/.config
+cp -rf .config/nvim ~/.config
+cp -rf .config/rofi ~/.config
+cp -rf .config/swaync ~/.config
+cp -rf .config/waybar ~/.config
+cp -rf .config/starship.toml ~/.config
+
+cp -rf .themes/CatMocha ~/.local/share/themes
+cp -rf .themes/CatMocha-hdpi ~/.local/share/themes
+cp -rf .themes/CatMocha-xhdpi ~/.local/share/themes
+cp -rf .themes/Everforest ~/.local/share/themes
+cp -rf .themes/Everforest-hdpi ~/.local/share/themes
+cp -rf .themes/Everforest-xhdpi ~/.local/share/themes
+cp -rf .themes/Rose-Pine ~/.local/share/themes
+cp -rf .themes/Rose-Pine-hdpi ~/.local/share/themes
+cp -rf .themes/Rose-Pine-xhdpi ~/.local/share/themes
+
+cp -rf .icons/catppuccin-cursors ~/.local/share/icons
+cp -rf .icons/catppuccin-cursors-light ~/.local/share/icons
+cp -rf .icons/Rose-Pine ~/.local/share/icons
+cp -rf .icons/rose-pine-cursors ~/.local/share/icons
+cp -rf .icons/rose-pine-cursors-light ~/.local/share/icons
+
+cp -rf Scripts ~/
 
 
-# cp -rf $SCRIPT_DIR/misc/dots/config/hypr ~/.config
+
+
+
+
+
+
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/environment /etc
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
+
+# kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
 
 ##############################################################################
