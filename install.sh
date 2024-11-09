@@ -13,6 +13,7 @@
 # https://github.com/catppuccin/papirus-folders
 # https://github.com/adi1090x/rofi
 # https://github.com/System64fumo/syshud
+# https://github.com/Cybersnake223/Hypr/blob/main/.config/hypr/hyprland.conf
 ###################################################################################
 
 set -e  # Quitte immédiatement en cas d'erreur.
