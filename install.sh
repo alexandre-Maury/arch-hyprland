@@ -151,6 +151,13 @@ done
 # yay -S --needed --noconfirm --ask=4 "${CURSORS}"
 # yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
 # yay -S --needed --noconfirm --ask=4 "${ICONS}"
+yay -S gtk-engine-murrine
+git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git $workDirName/Rose-Pine-GTK-Theme
+cd $workDirName/Rose-Pine-GTK-Theme/themes
+chmod +x install.sh
+bash install.sh --tweak moon mac outline float -t purple -l -d ~/.local/share/themes
+cd ..
+
 
 ##############################################################################
 ## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
@@ -323,20 +330,20 @@ cp -rf .config/swaync ~/.config
 cp -rf .config/waybar ~/.config
 cp -rf .config/starship.toml ~/.config
 
-cp -rf .themes/CatMocha ~/.local/share/themes
-cp -rf .themes/CatMocha-hdpi ~/.local/share/themes
-cp -rf .themes/CatMocha-xhdpi ~/.local/share/themes
-cp -rf .themes/Everforest ~/.local/share/themes
-cp -rf .themes/Everforest-hdpi ~/.local/share/themes
-cp -rf .themes/Everforest-xhdpi ~/.local/share/themes
-cp -rf .themes/Rose-Pine ~/.local/share/themes
-cp -rf .themes/Rose-Pine-hdpi ~/.local/share/themes
-cp -rf .themes/Rose-Pine-xhdpi ~/.local/share/themes
+# cp -rf .themes/CatMocha ~/.local/share/themes
+# cp -rf .themes/CatMocha-hdpi ~/.local/share/themes
+# cp -rf .themes/CatMocha-xhdpi ~/.local/share/themes
+# cp -rf .themes/Everforest ~/.local/share/themes
+# cp -rf .themes/Everforest-hdpi ~/.local/share/themes
+# cp -rf .themes/Everforest-xhdpi ~/.local/share/themes
+# cp -rf .themes/Rose-Pine ~/.local/share/themes
+# cp -rf .themes/Rose-Pine-hdpi ~/.local/share/themes
+# cp -rf .themes/Rose-Pine-xhdpi ~/.local/share/themes
 
-cp -rf .icons/catppuccin-cursors ~/.local/share/icons
-cp -rf .icons/catppuccin-cursors-light ~/.local/share/icons
-cp -rf .icons/rose-pine-cursors ~/.local/share/icons
-cp -rf .icons/rose-pine-cursors-light ~/.local/share/icons
+# cp -rf .icons/catppuccin-cursors ~/.local/share/icons
+# cp -rf .icons/catppuccin-cursors-light ~/.local/share/icons
+# cp -rf .icons/rose-pine-cursors ~/.local/share/icons
+# cp -rf .icons/rose-pine-cursors-light ~/.local/share/icons
 
 # cp -rf .icons/Rose-Pine ~/.local/share/icons
 
