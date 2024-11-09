@@ -12,6 +12,7 @@
 # https://github.com/rose-pine/cursor
 # https://github.com/catppuccin/papirus-folders
 # https://github.com/adi1090x/rofi
+# https://github.com/System64fumo/syshud
 ###################################################################################
 
 set -e  # Quitte immédiatement en cas d'erreur.
@@ -84,8 +85,8 @@ fi
 ## Installation des utilitaires (libnotify)                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop pamixer pavucontrol kitty starship dolphin mako lxappearance which neofetch
-yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync         
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop kitty starship dolphin mako lxappearance which neofetch macchina yad rustup 
+yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire-jack pamixer pavucontrol pulseaudio         
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts
 
 ## sddm
@@ -114,6 +115,16 @@ yay -S --needed --noconfirm --ask=4 gdb ninja gcc cmake meson libxcb xcb-proto x
 
 ## hyprwayland-scanner 
 yay -S --needed --noconfirm --ask=4 pugixml
+
+##############################################################################
+## Installation de l'utilitaires syshud                                               
+##############################################################################
+git clone https://aur.archlinux.org/syshud.git $workDirName/syshud
+cd $workDirName/syshud
+makepkg -si --noconfirm --needed  # -s will install deps, -i installs automatically
+cd ..
+
+
 
 ##############################################################################
 ## Fonts Installation                                            
@@ -155,6 +166,8 @@ done
 # wget ${SDDM} -O $workDirName/catppuccin.zip
 # sudo mkdir -p /usr/share/sddm/themes/${SDDM_THEME_NAME}
 # sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes
+
+
 
 
 ##############################################################################
