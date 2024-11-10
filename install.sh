@@ -86,8 +86,8 @@ fi
 ## Installation des utilitaires (libnotify - mako - lxappearance)                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop kitty starship dolphin which neofetch macchina yad rustup 
-yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire-jack pamixer pavucontrol pulseaudio         
+yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop kitty starship dolphin which neofetch macchina yad rustup firefox
+yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol pulseaudio         
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts
 
 ## sddm
