@@ -86,8 +86,8 @@ fi
 ## Installation des utilitaires (libnotify - mako - lxappearance)                                                 
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar polkit-kde-agent btop kitty starship dolphin which neofetch macchina yad rustup firefox
-yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol pulseaudio         
+yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-kde-agent btop kitty starship dolphin which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors
+yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol pulseaudio bluez bluez-utils blueman        
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts
 
 ## sddm
@@ -365,6 +365,8 @@ chmod +x $HOME/Scripts/*
 ## Activation des services                                              
 ##############################################################################
 # sudo systemctl enable sddm
+sudo systemctl enable NetworkManager.service
+sudo systemctl enable bluetooth.service
 
 
 ##############################################################################
