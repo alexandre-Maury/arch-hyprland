@@ -7,6 +7,8 @@
 # THEMES --
 # https://github.com/SirEthanator/Hyprland-Dots/tree/main --> PRIORITAIRE
 # https://github.com/orgs/catppuccin/repositories
+
+# Kvantum --> import rose-pine
 ###################################################################################
 
 set -e  # Quitte immédiatement en cas d'erreur.
@@ -330,11 +332,6 @@ unzip .themes/Catppuccin-Dark-Frappe-BL-MB.zip -d ~/.local/share/themes
 unzip .themes/Catppuccin-Dark-Macchiato-BL-MB.zip -d ~/.local/share/themes
 unzip .themes/Catppuccin-Light-BL-MB.zip -d ~/.local/share/themes
 
-unzip .themes/Everforest-Dark-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Everforest-Dark-Medium-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Everforest-Dark-Soft-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Everforest-Light-BL-MB.zip -d ~/.local/share/themes
-
 unzip .themes/Rosepine-Dark-BL-MB.zip -d ~/.local/share/themes
 unzip .themes/Rosepine-Dark-Moon-BL-MB.zip -d ~/.local/share/themes
 unzip .themes/Rosepine-Light-BL-MB.zip -d ~/.local/share/themes
@@ -343,9 +340,6 @@ unzip .icons/Catppuccin-Frappe.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Latte.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Macchiato.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Mocha.zip -d ~/.local/share/icons
-
-unzip .icons/Everforest-Dark.zip -d ~/.local/share/icons
-unzip .icons/Everforest-Light-Icons.zip -d ~/.local/share/icons
 
 unzip .icons/rose-pine-moon.zip -d ~/.local/share/icons
 unzip .icons/rose-pine.zip -d ~/.local/share/icons
@@ -362,6 +356,12 @@ chmod +x $HOME/Scripts/*
 
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
+kitty +kitten themes --reload-in=all Rosé Pine
+# kitty +kitten themes --reload-in=all Rosé Pine Moon
+# kitty +kitten themes --reload-in=all Rosé Pine Dawn
+# kitty +kitten themes --reload-in=all Catppuccin-Latte
+# kitty +kitten themes --reload-in=all Catppuccin-Frappe
+# kitty +kitten themes --reload-in=all Catppuccin-Macchiato
 # kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
 
