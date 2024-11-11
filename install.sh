@@ -344,16 +344,16 @@ unzip .themes/Rosepine-Dark-BL-MB.zip -d ~/.local/share/themes
 unzip .themes/Rosepine-Dark-Moon-BL-MB.zip -d ~/.local/share/themes
 unzip .themes/Rosepine-Light-BL-MB.zip -d ~/.local/share/themes
 
-unzip .icons/Catppuccin-Frappe.zip ~/.local/share/icons
-unzip .icons/Catppuccin-Latte.zip ~/.local/share/icons
-unzip .icons/Catppuccin-Macchiato.zip ~/.local/share/icons
-unzip .icons/Catppuccin-Mocha.zip ~/.local/share/icons
+unzip .icons/Catppuccin-Frappe.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Latte.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Macchiato.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Mocha.zip -d ~/.local/share/icons
 
-unzip .icons/Everforest-Dark.zip ~/.local/share/icons
-unzip .icons/Everforest-Light-Icons.zip ~/.local/share/icons
+unzip .icons/Everforest-Dark.zip -d ~/.local/share/icons
+unzip .icons/Everforest-Light-Icons.zip -d ~/.local/share/icons
 
-unzip .icons/rose-pine-moon.zip ~/.local/share/icons
-unzip .icons/rose-pine.zip ~/.local/share/icons
+unzip .icons/rose-pine-moon.zip -d ~/.local/share/icons
+unzip .icons/rose-pine.zip -d ~/.local/share/icons
 
 
 cp -rf Scripts ~/
