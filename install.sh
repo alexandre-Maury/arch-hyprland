@@ -1,19 +1,12 @@
 #!/usr/bin/bash
 
 ###################################################################################
-# GTK --
-# https://www.youtube.com/watch?v=qU6iDx4xB5o --> MODIFIER GTK
 # https://github.com/EliverLara/Shades-of-purple-gtk
-# https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme --> A VOIR ABSOLUMENT
+
 
 # THEMES --
 # https://github.com/SirEthanator/Hyprland-Dots/tree/main --> PRIORITAIRE
-# 
-# https://github.com/rose-pine/cursor
-# https://github.com/catppuccin/papirus-folders
-# https://github.com/adi1090x/rofi
-# https://github.com/System64fumo/syshud
-# https://github.com/Cybersnake223/Hypr/blob/main/.config/hypr/hyprland.conf
+# https://github.com/orgs/catppuccin/repositories
 ###################################################################################
 
 set -e  # Quitte immédiatement en cas d'erreur.
