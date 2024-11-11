@@ -83,7 +83,7 @@ if [[ "$PARU" == "On" ]]; then
 fi
 
 ##############################################################################
-## Installation des utilitaires (libnotify - mako - lxappearance)                                                 
+## Installation des utilitaires (libnotify - mako - lxappearance- gedit)                                                 
 ##############################################################################
 
 yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-kde-agent btop kitty starship dolphin which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors
@@ -330,39 +330,30 @@ cp -rf .themes/CatMocha ~/.local/share/themes
 cp -rf .themes/CatMocha-hdpi ~/.local/share/themes
 cp -rf .themes/CatMocha-xhdpi ~/.local/share/themes
 
-cp -rf .themes/Catppuccin-Dark ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-Frappe ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-Frappe-hdpi ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-Frappe-xhdpi ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-hdpi ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-Macchiato ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-Macchiato-hdpi ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-Macchiato-xhdpi ~/.local/share/themes
-cp -rf .themes/Catppuccin-Dark-xhdpi ~/.local/share/themes
+unzip .themes/Catppuccin-Dark-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Dark-Frappe-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Dark-Macchiato-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Light-BL-MB.zip -d ~/.local/share/themes
 
-cp -rf .themes/Everforest-Dark ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-hdpi ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-Medium ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-Medium-hdpi ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-Medium-xhdpi ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-Soft ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-Soft-hdpi ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-Soft-xhdpi ~/.local/share/themes
-cp -rf .themes/Everforest-Dark-xhdpi ~/.local/share/themes
-cp -rf .themes/Everforest-Light ~/.local/share/themes
-cp -rf .themes/Everforest-Light-hdpi ~/.local/share/themes
-cp -rf .themes/Everforest-Light-xhdpi ~/.local/share/themes
+unzip .themes/Everforest-Dark-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Everforest-Dark-Medium-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Everforest-Dark-Soft-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Everforest-Light-BL-MB.zip -d ~/.local/share/themes
 
-cp -rf .themes/Rosepine-Dark ~/.local/share/themes
-cp -rf .themes/Rosepine-Dark-hdpi ~/.local/share/themes
-cp -rf .themes/Rosepine-Dark-Moon ~/.local/share/themes
-cp -rf .themes/Rosepine-Dark-Moon-hdpi ~/.local/share/themes
-cp -rf .themes/Rosepine-Dark-Moon-xhdpi ~/.local/share/themes
-cp -rf .themes/Rosepine-Dark-xhdpi ~/.local/share/themes
+unzip .themes/Rosepine-Dark-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Rosepine-Dark-Moon-BL-MB.zip -d ~/.local/share/themes
+unzip .themes/Rosepine-Light-BL-MB.zip -d ~/.local/share/themes
 
+unzip .icons/Catppuccin-Frappe.zip ~/.local/share/icons
+unzip .icons/Catppuccin-Latte.zip ~/.local/share/icons
+unzip .icons/Catppuccin-Macchiato.zip ~/.local/share/icons
+unzip .icons/Catppuccin-Mocha.zip ~/.local/share/icons
 
+unzip .icons/Everforest-Dark.zip ~/.local/share/icons
+unzip .icons/Everforest-Light-Icons.zip ~/.local/share/icons
 
-# cp -rf .icons/catppuccin-cursors ~/.local/share/icons
+unzip .icons/rose-pine-moon.zip ~/.local/share/icons
+unzip .icons/rose-pine.zip ~/.local/share/icons
 
 
 cp -rf Scripts ~/
