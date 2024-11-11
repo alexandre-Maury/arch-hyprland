@@ -88,7 +88,7 @@ fi
 
 yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-kde-agent btop kitty starship dolphin which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors
 yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol pulseaudio bluez bluez-utils blueman        
-yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts nwg-look gtk-engine-murrine
 
 ## sddm
 yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
@@ -151,12 +151,8 @@ done
 # yay -S --needed --noconfirm --ask=4 "${CURSORS}"
 # yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
 # yay -S --needed --noconfirm --ask=4 "${ICONS}"
-yay -S gtk-engine-murrine
-git clone https://github.com/Fausto-Korpsvart/Rose-Pine-GTK-Theme.git $workDirName/Rose-Pine-GTK-Theme
-cd $workDirName/Rose-Pine-GTK-Theme/themes
-chmod +x install.sh
-bash install.sh --tweak moon mac outline float -t purple -l -d ~/.local/share/themes
-cd ..
+
+
 
 
 ##############################################################################
@@ -330,22 +326,44 @@ cp -rf .config/swaync ~/.config
 cp -rf .config/waybar ~/.config
 cp -rf .config/starship.toml ~/.config
 
-# cp -rf .themes/CatMocha ~/.local/share/themes
-# cp -rf .themes/CatMocha-hdpi ~/.local/share/themes
-# cp -rf .themes/CatMocha-xhdpi ~/.local/share/themes
-# cp -rf .themes/Everforest ~/.local/share/themes
-# cp -rf .themes/Everforest-hdpi ~/.local/share/themes
-# cp -rf .themes/Everforest-xhdpi ~/.local/share/themes
-# cp -rf .themes/Rose-Pine ~/.local/share/themes
-# cp -rf .themes/Rose-Pine-hdpi ~/.local/share/themes
-# cp -rf .themes/Rose-Pine-xhdpi ~/.local/share/themes
+cp -rf .themes/CatMocha ~/.local/share/themes
+cp -rf .themes/CatMocha-hdpi ~/.local/share/themes
+cp -rf .themes/CatMocha-xhdpi ~/.local/share/themes
+
+cp -rf .themes/Catppuccin-Dark ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-Frappe ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-Frappe-hdpi ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-Frappe-xhdpi ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-hdpi ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-Macchiato ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-Macchiato-hdpi ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-Macchiato-xhdpi ~/.local/share/themes
+cp -rf .themes/Catppuccin-Dark-xhdpi ~/.local/share/themes
+
+cp -rf .themes/Everforest-Dark ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-hdpi ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-Medium ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-Medium-hdpi ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-Medium-xhdpi ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-Soft ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-Soft-hdpi ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-Soft-xhdpi ~/.local/share/themes
+cp -rf .themes/Everforest-Dark-xhdpi ~/.local/share/themes
+cp -rf .themes/Everforest-Light ~/.local/share/themes
+cp -rf .themes/Everforest-Light-hdpi ~/.local/share/themes
+cp -rf .themes/Everforest-Light-xhdpi ~/.local/share/themes
+
+cp -rf .themes/Rosepine-Dark ~/.local/share/themes
+cp -rf .themes/Rosepine-Dark-hdpi ~/.local/share/themes
+cp -rf .themes/Rosepine-Dark-Moon ~/.local/share/themes
+cp -rf .themes/Rosepine-Dark-Moon-hdpi ~/.local/share/themes
+cp -rf .themes/Rosepine-Dark-Moon-xhdpi ~/.local/share/themes
+cp -rf .themes/Rosepine-Dark-xhdpi ~/.local/share/themes
+
+
 
 # cp -rf .icons/catppuccin-cursors ~/.local/share/icons
-# cp -rf .icons/catppuccin-cursors-light ~/.local/share/icons
-# cp -rf .icons/rose-pine-cursors ~/.local/share/icons
-# cp -rf .icons/rose-pine-cursors-light ~/.local/share/icons
 
-# cp -rf .icons/Rose-Pine ~/.local/share/icons
 
 cp -rf Scripts ~/
 
