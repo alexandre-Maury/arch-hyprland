@@ -28,6 +28,8 @@ workDirName="${HOME}/buildHypr";
 rm -rf $workDirName
 
 mkdir -p $workDirName
+mkdir -p ~/.config/gtk-3.0
+mkdir -p ~/.config/gtk-4.0
 mkdir -p ~/.local/share/themes
 mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/fonts
