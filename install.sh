@@ -352,7 +352,6 @@ unzip .icons/rose-pine-moon-cursor.zip -d ~/.local/share/icons
 
 cp -rf Scripts ~/
 
-
 chmod +x $HOME/.config/waybar/scripts/*
 chmod +x $HOME/.config/hypr/scripts/*
 chmod +x $HOME/.local/bin/*
