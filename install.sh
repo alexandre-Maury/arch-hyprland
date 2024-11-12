@@ -346,10 +346,6 @@ chmod +x $HOME/Scripts/*
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
 kitty +kitten themes --reload-in=all Rosé Pine
-# kitty +kitten themes --reload-in=all Rosé Pine Moon
-# kitty +kitten themes --reload-in=all Rosé Pine Dawn
-# kitty +kitten themes --reload-in=all Catppuccin-Latte
-# kitty +kitten themes --reload-in=all Catppuccin-Frappe
 # kitty +kitten themes --reload-in=all Catppuccin-Macchiato
 # kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
