@@ -80,10 +80,10 @@ if [[ "$PARU" == "On" ]]; then
 fi
 
 ##############################################################################
-## Installation des utilitaires (libnotify - mako - lxappearance- gedit)                                                 
+## Installation des utilitaires (libnotify - mako - lxappearance- gedit)   kdialog kde-gtk-config                                        
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-kde-agent btop kitty starship dolphin which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors
+yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-kde-agent btop kitty starship nemo which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors
 yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol pulseaudio bluez bluez-utils blueman        
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts nwg-look gtk-engine-murrine
 
