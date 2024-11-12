@@ -323,27 +323,32 @@ cp -rf .config/swaync ~/.config
 cp -rf .config/waybar ~/.config
 cp -rf .config/starship.toml ~/.config
 
-cp -rf .themes/CatMocha ~/.local/share/themes
-cp -rf .themes/CatMocha-hdpi ~/.local/share/themes
-cp -rf .themes/CatMocha-xhdpi ~/.local/share/themes
+unzip .themes/Catppuccin-Dark.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Dark-Macchiato.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Dark-Frappe.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Light.zip -d ~/.local/share/themes
+unzip .themes/Rosepine-Dark.zip -d ~/.local/share/themes
+unzip .themes/Rosepine-Dark-Moon.zip -d ~/.local/share/themes
+unzip .themes/Rosepine-Light.zip -d ~/.local/share/themes
+unzip .themes/Nightfox-Dark.zip -d ~/.local/share/themes
+unzip .themes/Nightfox-Dark-Carbon.zip -d ~/.local/share/themes
+unzip .themes/Nightfox-Dark-Nord.zip -d ~/.local/share/themes
+unzip .themes/Nightfox-Light.zip -d ~/.local/share/themes
 
-unzip .themes/Catppuccin-Dark-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Dark-Frappe-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Dark-Macchiato-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Light-BL-MB.zip -d ~/.local/share/themes
+unzip .icons/Catppuccin-Frappe-icons.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Latte-icons.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Macchiato-icons-zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Mocha-icons.zip -d ~/.local/share/icons
+unzip .icons/Duskfox-icons.zip -d ~/.local/share/icons
+unzip .icons/rose-pine-icons.zip -d ~/.local/share/icons
+unzip .icons/rose-pine-moon-icons.zip -d ~/.local/share/icons
 
-unzip .themes/Rosepine-Dark-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Rosepine-Dark-Moon-BL-MB.zip -d ~/.local/share/themes
-unzip .themes/Rosepine-Light-BL-MB.zip -d ~/.local/share/themes
-
-unzip .icons/Catppuccin-Frappe.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Latte.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Macchiato.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Mocha.zip -d ~/.local/share/icons
-
-unzip .icons/rose-pine-moon.zip -d ~/.local/share/icons
-unzip .icons/rose-pine.zip -d ~/.local/share/icons
-
+unzip .icons/Catppuccin-Frappe-cursor.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Latte-cursor.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Macchiato-cursor.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Mocha-cursor.zip -d ~/.local/share/icons
+unzip .icons/rose-pine-cursor.zip -d ~/.local/share/icons
+unzip .icons/rose-pine-moon-cursor.zip -d ~/.local/share/icons
 
 cp -rf Scripts ~/
 
