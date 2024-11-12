@@ -329,11 +329,11 @@ unzip .themes/Rosepine.zip -d ~/.local/share/themes
 
 unzip .cursor/Catppuccin-Macchiato.zip -d ~/.local/share/icons
 unzip .cursor/Catppuccin-Mocha.zip -d ~/.local/share/icons
-unzip .cursor/rosepine.zip -d ~/.local/share/icons
+unzip .cursor/Rosepine.zip -d ~/.local/share/icons
 
 unzip .icons/Catppuccin-Macchiato.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Mocha.zip -d ~/.local/share/icons
-unzip .icons/rosepine.zip -d ~/.local/share/icons
+unzip .icons/Rosepine.zip -d ~/.local/share/icons
 
 cp -rf Scripts ~/
 
