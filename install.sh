@@ -325,15 +325,15 @@ cp -rf .config/starship.toml ~/.config
 
 unzip .themes/Catppuccin-Mocha.zip -d ~/.local/share/themes
 unzip .themes/Catppuccin-Macchiato.zip -d ~/.local/share/themes
-unzip .themes/Rosepine-Dark.zip -d ~/.local/share/themes
+unzip .themes/Rosepine.zip -d ~/.local/share/themes
 
-unzip .icons/Catppuccin-Macchiato-icons-zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Mocha-icons.zip -d ~/.local/share/icons
-unzip .icons/rosepine-icons.zip -d ~/.local/share/icons
+unzip .cursor/Catppuccin-Macchiato.zip -d ~/.local/share/icons
+unzip .cursor/Catppuccin-Mocha.zip -d ~/.local/share/icons
+unzip .cursor/rosepine.zip -d ~/.local/share/icons
 
-unzip .icons/Catppuccin-Macchiato-cursor.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Mocha-cursor.zip -d ~/.local/share/icons
-unzip .icons/rosepine-cursor.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Macchiato.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Mocha.zip -d ~/.local/share/icons
+unzip .icons/rosepine.zip -d ~/.local/share/icons
 
 cp -rf Scripts ~/
 
