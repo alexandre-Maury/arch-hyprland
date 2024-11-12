@@ -323,17 +323,17 @@ cp -rf .config/swaync ~/.config
 cp -rf .config/waybar ~/.config
 cp -rf .config/starship.toml ~/.config
 
-unzip .themes/Catppuccin-Mocha.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Macchiato.zip -d ~/.local/share/themes
-unzip .themes/Rosepine.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Mocha-GTK.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Macchiato-GTK.zip -d ~/.local/share/themes
+unzip .themes/Rosepine-GTK.zip -d ~/.local/share/themes
 
-unzip .cursor/Catppuccin-Macchiato.zip -d ~/.local/share/icons
-unzip .cursor/Catppuccin-Mocha.zip -d ~/.local/share/icons
-unzip .cursor/Rosepine.zip -d ~/.local/share/icons
+unzip .cursor/Catppuccin-Macchiato-Cursor.zip -d ~/.local/share/icons
+unzip .cursor/Catppuccin-Mocha-Cursor.zip -d ~/.local/share/icons
+unzip .cursor/Rosepine-Cursor.zip -d ~/.local/share/icons
 
-unzip .icons/Catppuccin-Macchiato.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Mocha.zip -d ~/.local/share/icons
-unzip .icons/Rosepine.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Macchiato-Icon.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Mocha-Icon.zip -d ~/.local/share/icons
+unzip .icons/Rosepine-Icon.zip -d ~/.local/share/icons
 
 cp -rf Scripts ~/
 
