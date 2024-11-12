@@ -323,32 +323,17 @@ cp -rf .config/swaync ~/.config
 cp -rf .config/waybar ~/.config
 cp -rf .config/starship.toml ~/.config
 
-unzip .themes/Catppuccin-Dark.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Dark-Macchiato.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Dark-Frappe.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Light.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Mocha.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Macchiato.zip -d ~/.local/share/themes
 unzip .themes/Rosepine-Dark.zip -d ~/.local/share/themes
-unzip .themes/Rosepine-Dark-Moon.zip -d ~/.local/share/themes
-unzip .themes/Rosepine-Light.zip -d ~/.local/share/themes
-unzip .themes/Nightfox-Dark.zip -d ~/.local/share/themes
-unzip .themes/Nightfox-Dark-Carbon.zip -d ~/.local/share/themes
-unzip .themes/Nightfox-Dark-Nord.zip -d ~/.local/share/themes
-unzip .themes/Nightfox-Light.zip -d ~/.local/share/themes
 
-unzip .icons/Catppuccin-Frappe-icons.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Latte-icons.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Macchiato-icons-zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Mocha-icons.zip -d ~/.local/share/icons
-unzip .icons/Duskfox-icons.zip -d ~/.local/share/icons
-unzip .icons/rose-pine-icons.zip -d ~/.local/share/icons
-unzip .icons/rose-pine-moon-icons.zip -d ~/.local/share/icons
+unzip .icons/rosepine-icons.zip -d ~/.local/share/icons
 
-unzip .icons/Catppuccin-Frappe-cursor.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Latte-cursor.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Macchiato-cursor.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Mocha-cursor.zip -d ~/.local/share/icons
-unzip .icons/rose-pine-cursor.zip -d ~/.local/share/icons
-unzip .icons/rose-pine-moon-cursor.zip -d ~/.local/share/icons
+unzip .icons/rosepine-cursor.zip -d ~/.local/share/icons
 
 cp -rf Scripts ~/
 
