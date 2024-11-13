@@ -127,11 +127,12 @@ cd ..
 ##############################################################################
 ## Fonts Installation                                            
 ##############################################################################
+mkdir -p $workDirName/fonts
 cd ~/.local/share/fonts
 # Télécharger chaque fichier seulement s'il n'existe pas déjà
 for url in "${URL_FONTS[@]}"; do
   file_name=$(basename "$url")
-  if [ ! -f "$file_name" ]; then
+  if [ ! -f "~/.local/share/fonts/$file_name" ]; then
     log_prompt "INFO" && echo "Téléchargement de $file_name" && echo ""
     curl -fLO "$url"
   else
@@ -139,27 +140,46 @@ for url in "${URL_FONTS[@]}"; do
   fi
 done
 
+##############################################################################
+## Cursor Installation                                            
+##############################################################################
+mkdir -p $workDirName/cursors
+
+# Télécharge et extrait chaque fichier du tableau
+for url in "${URL_CURSORS[@]}"; do
+  file_name=$(basename "$url")
+  name="${file_name%.*}"
+
+  # Vérifie si le dossier de curseur existe déjà
+  if [[ -d "$HOME/.local/share/icons/$name" ]]; then
+    echo "Le curseur '$name' est déjà installé, passage au suivant."
+    continue
+  fi
+
+  # Télécharge et extrait le fichier si non installé
+  echo "Téléchargement et extraction de '$name'..."
+  curl -LOsS "$url" -o "$workDirName/cursors/$file_name"
+
+  # Vérifie l'extension du fichier pour utiliser la bonne commande d'extraction
+  if [[ "$file_name" == *.zip ]]; then
+    unzip -o "$workDirName/cursors/$file_name" -d "$HOME/.local/share/icons"
+  elif [[ "$file_name" == *.tar.xz ]]; then
+    tar -xvf "$workDirName/cursors/$file_name" -C "$HOME/.local/share/icons"
+  fi
+
+  # Supprime le fichier téléchargé après extraction
+  rm "$workDirName/cursors/$file_name"
+done
+
 
 ##############################################################################
-## Themes Installation                                            
+## Old Installation                                            
 ##############################################################################
 
 # yay -S --needed --noconfirm --ask=4 "${GTK}"
-# yay -S --needed --noconfirm --ask=4 "${CURSORS}"
 # yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
 # yay -S --needed --noconfirm --ask=4 "${ICONS}"
 
-
-
-
-##############################################################################
-## Icons Installation : https://github.com/vinceliuice/Tela-circle-icon-theme                                           
-##############################################################################
-# git clone https://github.com/vinceliuice/Tela-icon-theme.git $workDirName/Tela-icon-theme
-# cd $workDirName/Tela-icon-theme
-# chmod +x install.sh
-# bash install.sh -a 
-# cd ..
 
 ##############################################################################
 ## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         

@@ -29,8 +29,8 @@
 REGION="Europe"
 PAYS="France"
 CITY="Paris"
-
 LANG="fr_FR.UTF-8"
+PARU="Off"
 
 # https://github.com/ryanoasis/nerd-fonts/tree/300890327ae50ed08a0c2ba89e8bfd67425dd3b8
 URL_FONTS=(
@@ -60,16 +60,15 @@ URL_FONTS=(
   "https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Meslo/S/Regular/MesloLGSNerdFontPropo-Regular.ttf"
 )
 
-PARU="Off"
+URL_CURSORS=(
+  "https://github.com/catppuccin/cursors/releases/download/v1.0.1/catppuccin-macchiato-dark-cursors.zip"
+  "https://github.com/catppuccin/cursors/releases/download/v1.0.1/catppuccin-mocha-dark-cursors.zip"
+  "https://github.com/catppuccin/cursors/releases/download/v1.0.1/catppuccin-macchiato-lavender-cursors.zip"
+  "https://github.com/catppuccin/cursors/releases/download/v1.0.1/catppuccin-mocha-lavender-cursors.zip"
+  "https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePine-Linux.tar.xz"
+)
 
-# https://github.com/brycewalkerdev/catppuccin-gtk
-# https://github.com/catppuccin/cursors
-# https://github.com/catppuccin/sddm
 
-GTK="catppuccin-gtk-theme-macchiato" # catppuccin-gtk-theme-mocha catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-frappe catppuccin-gtk-theme-latte
-ICONS="catppuccin-icons-git"
-CURSORS="catppuccin-cursors-macchiato" # catppuccin-cursors-latte catppuccin-cursors-frappe catppuccin-cursors-macchiato catppuccin-cursors-mocha
-KVANTUM="kvantum-theme-catppuccin-git"
 
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-frappe.zip
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-latte.zip
@@ -77,4 +76,5 @@ KVANTUM="kvantum-theme-catppuccin-git"
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip
 SDDM="https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip"
 SDDM_THEME_NAME="catppuccin-macchiato" # Penser à modifier dans : $SCRIPT_DIR/misc/dots/etc/sddm.conf
+
 
