@@ -2,26 +2,6 @@
 
 # script config.sh
 
-# https://catppuccin.com/ports
-# https://github.com/catppuccin/fish
-# https://github.com/catppuccin/fzf/tree/main
-# https://github.com/catppuccin/hyprlock
-# https://github.com/catppuccin/kitty
-# https://github.com/catppuccin/rofi
-# https://github.com/catppuccin/qt5ct
-# https://github.com/catppuccin/obsidian
-# https://github.com/catppuccin/nvim
-# https://github.com/catppuccin/vim
-# https://github.com/catppuccin/vscode
-# https://github.com/catppuccin/vscode-icons
-# https://github.com/catppuccin/thunderbird
-# https://github.com/catppuccin/xresources
-# https://github.com/catppuccin/zsh-syntax-highlighting
-# https://github.com/catppuccin/zsh-fsh
-# https://github.com/catppuccin/waybar/tree/main
-
-# https://github.com/MrVivekRajan/Hypr-Dots/tree/Type-1
-
 ##############################################################################
 ## Config arch post-install                                                   
 ##############################################################################
@@ -68,13 +48,14 @@ URL_CURSORS=(
   "https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePine-Linux.tar.xz"
 )
 
+# wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="$HOME/.local/share/icons" sh
 
 
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-frappe.zip
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-latte.zip
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip
 # https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip
-SDDM="https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip"
-SDDM_THEME_NAME="catppuccin-macchiato" # Penser à modifier dans : $SCRIPT_DIR/misc/dots/etc/sddm.conf
+SDDM="https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip"
+SDDM_THEME_NAME="catppuccin-mocha" # Penser à modifier dans : $SCRIPT_DIR/misc/dots/etc/sddm.conf
 
 

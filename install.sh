@@ -8,7 +8,6 @@
 # https://github.com/SirEthanator/Hyprland-Dots/tree/main --> PRIORITAIRE
 # https://github.com/orgs/catppuccin/repositories
 
-# Kvantum --> import rose-pine
 ###################################################################################
 
 set -e  # Quitte immédiatement en cas d'erreur.
@@ -178,7 +177,6 @@ done
 ## Old Installation                                            
 ##############################################################################
 
-# yay -S --needed --noconfirm --ask=4 "${GTK}"
 # yay -S --needed --noconfirm --ask=4 "${KVANTUM}"
 # yay -S --needed --noconfirm --ask=4 "${ICONS}"
 
@@ -349,10 +347,6 @@ unzip .themes/Catppuccin-Mocha-GTK.zip -d ~/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d ~/.local/share/themes
 unzip .themes/Rosepine-GTK.zip -d ~/.local/share/themes
 
-unzip .cursor/Catppuccin-Macchiato-Cursor.zip -d ~/.local/share/icons
-unzip .cursor/Catppuccin-Mocha-Cursor.zip -d ~/.local/share/icons
-unzip .cursor/Rosepine-Cursor.zip -d ~/.local/share/icons
-
 unzip .icons/Catppuccin-Macchiato-Icon.zip -d ~/.local/share/icons
 unzip .icons/Catppuccin-Mocha-Icon.zip -d ~/.local/share/icons
 unzip .icons/Rosepine-Icon.zip -d ~/.local/share/icons
@@ -363,7 +357,6 @@ chmod +x $HOME/.config/waybar/scripts/*
 chmod +x $HOME/.config/hypr/scripts/*
 chmod +x $HOME/.local/bin/*
 chmod +x $HOME/Scripts/*
-
 
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
