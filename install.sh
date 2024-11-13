@@ -358,12 +358,19 @@ unzip .icons/Catppuccin-Macchiato-Icon.zip -d $HOME/.local/share/icons
 unzip .icons/Catppuccin-Mocha-Icon.zip -d $HOME/.local/share/icons
 unzip .icons/Rosepine-Icon.zip -d $HOME/.local/share/icons
 
-cp -rf Scripts $HOME
+cp -rf Scripts $HOME # dossier laboratoire
 
-chmod +x $HOME/.config/waybar/scripts/*
-chmod +x $HOME/.config/hypr/scripts/*
-chmod +x $HOME/.local/bin/*
-chmod +x $HOME/Scripts/*
+chmod +x $HOME/.config/waybar/scripts/backlight.sh
+chmod +x $HOME/.config/waybar/scripts/ip.sh
+chmod +x $HOME/.config/waybar/scripts/microphone.sh
+chmod +x $HOME/.config/waybar/scripts/power.sh
+chmod +x $HOME/.config/waybar/scripts/system.sh
+chmod +x $HOME/.config/waybar/scripts/volume.sh
+
+chmod +x $HOME/.config/hypr/scripts/screenshot.sh
+chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
+
+
 
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
