@@ -83,7 +83,7 @@ fi
 ##############################################################################
 
 yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-kde-agent btop kitty starship nemo which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors
-yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol pulseaudio bluez bluez-utils blueman        
+yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol bluez bluez-utils blueman        
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts nwg-look gtk-engine-murrine
 
 ## sddm
@@ -342,7 +342,7 @@ cp -rf .config/rofi $HOME/.config
 cp -rf .config/swaync $HOME/.config
 cp -rf .config/waybar $HOME/.config
 cp -rf .config/gtk-3.0 $HOME/.config
-# cp -rf .config/gtk-4.0 $HOME/.config
+cp -rf .config/gtk-4.0 $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
 cp -rf .config/xsettingsd $HOME/.config
@@ -350,15 +350,15 @@ cp -rf .config/starship $HOME/.config
 cp -rf .config/starship.toml $HOME/.config
 cp -rf home/.gtkrc-2.0 $HOME
 
-unzip .themes/Catppuccin-Mocha-GTK.zip -d ~/.local/share/themes
-unzip .themes/Catppuccin-Macchiato-GTK.zip -d ~/.local/share/themes
-unzip .themes/Rosepine-GTK.zip -d ~/.local/share/themes
+unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
+unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
+unzip .themes/Rosepine-GTK.zip -d $HOME/.local/share/themes
 
-unzip .icons/Catppuccin-Macchiato-Icon.zip -d ~/.local/share/icons
-unzip .icons/Catppuccin-Mocha-Icon.zip -d ~/.local/share/icons
-unzip .icons/Rosepine-Icon.zip -d ~/.local/share/icons
+unzip .icons/Catppuccin-Macchiato-Icon.zip -d $HOME/.local/share/icons
+unzip .icons/Catppuccin-Mocha-Icon.zip -d $HOME/.local/share/icons
+unzip .icons/Rosepine-Icon.zip -d $HOME/.local/share/icons
 
-cp -rf Scripts ~/
+cp -rf Scripts $HOME
 
 chmod +x $HOME/.config/waybar/scripts/*
 chmod +x $HOME/.config/hypr/scripts/*
