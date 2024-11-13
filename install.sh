@@ -340,6 +340,7 @@ cp -rf .config/macchina $HOME/.config
 cp -rf .config/nvim $HOME/.config
 cp -rf .config/rofi $HOME/.config
 cp -rf .config/swaync $HOME/.config
+cp -rf .config/nwg-look $HOME/.config
 cp -rf .config/waybar $HOME/.config
 cp -rf .config/gtk-3.0 $HOME/.config
 cp -rf .config/gtk-4.0 $HOME/.config
