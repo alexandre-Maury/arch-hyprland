@@ -127,17 +127,21 @@ cd ..
 ##############################################################################
 ## Fonts Installation                                            
 ##############################################################################
-mkdir -p $workDirName/fonts
-cd ~/.local/share/fonts
-# Télécharger chaque fichier seulement s'il n'existe pas déjà
+
+# Télécharge et copie chaque police du tableau si non existante
 for url in "${URL_FONTS[@]}"; do
   file_name=$(basename "$url")
-  if [ ! -f "~/.local/share/fonts/$file_name" ]; then
-    log_prompt "INFO" && echo "Téléchargement de $file_name" && echo ""
-    curl -fLO "$url"
-  else
-    log_prompt "WARNING" && echo "$file_name existe déjà, fonts ignoré" && echo ""
+
+  # Vérifie si la police existe déjà dans le répertoire
+  if [[ -f "$HOME/.local/share/fonts/$file_name" ]]; then
+    echo "La police '$file_name' est déjà installée, passage au suivant."
+    continue
   fi
+
+  # Télécharge et copie la police
+  echo "Téléchargement de '$file_name'..."
+  curl -LsS "$url" -o "$HOME/.local/share/fonts/$file_name"
+
 done
 
 ##############################################################################
@@ -148,7 +152,7 @@ mkdir -p $workDirName/cursors
 # Télécharge et extrait chaque fichier du tableau
 for url in "${URL_CURSORS[@]}"; do
   file_name=$(basename "$url")
-  name="${file_name%.*}"
+  name="${file_name%%.*}"
 
   # Vérifie si le dossier de curseur existe déjà
   if [[ -d "$HOME/.local/share/icons/$name" ]]; then
@@ -158,7 +162,7 @@ for url in "${URL_CURSORS[@]}"; do
 
   # Télécharge et extrait le fichier si non installé
   echo "Téléchargement et extraction de '$name'..."
-  curl -LOsS "$url" -o "$workDirName/cursors/$file_name"
+  curl -L "$url" -o "$workDirName/cursors/$file_name"
 
   # Vérifie l'extension du fichier pour utiliser la bonne commande d'extraction
   if [[ "$file_name" == *.zip ]]; then
@@ -167,8 +171,6 @@ for url in "${URL_CURSORS[@]}"; do
     tar -xvf "$workDirName/cursors/$file_name" -C "$HOME/.local/share/icons"
   fi
 
-  # Supprime le fichier téléchargé après extraction
-  rm "$workDirName/cursors/$file_name"
 done
 
 
