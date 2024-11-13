@@ -328,20 +328,27 @@ cd ..
 ##############################################################################
 ## Configuration                                              
 ##############################################################################
-log_prompt "INFO" && echo "Installation de Hyprland" && echo ""
+log_prompt "INFO" && echo "Configuration du systemes" && echo ""
 git clone --recursive https://github.com/alexandre-Maury/dotfiles.git $workDirName/dotfiles
 cd $workDirName/dotfiles
 
-cp -rf .config/cava ~/.config
-cp -rf .config/hypr ~/.config
-cp -rf .config/kitty ~/.config
-cp -rf .config/Kvantum ~/.config
-cp -rf .config/macchina ~/.config
-cp -rf .config/nvim ~/.config
-cp -rf .config/rofi ~/.config
-cp -rf .config/swaync ~/.config
-cp -rf .config/waybar ~/.config
-cp -rf .config/starship.toml ~/.config
+cp -rf .config/cava $HOME/.config
+cp -rf .config/hypr $HOME/.config
+cp -rf .config/kitty $HOME/.config
+cp -rf .config/Kvantum $HOME/.config
+cp -rf .config/macchina $HOME/.config
+cp -rf .config/nvim $HOME/.config
+cp -rf .config/rofi $HOME/.config
+cp -rf .config/swaync $HOME/.config
+cp -rf .config/waybar $HOME/.config
+cp -rf .config/gtk-3.0 $HOME/.config
+# cp -rf .config/gtk-4.0 $HOME/.config
+cp -rf .config/qt5ct $HOME/.config
+cp -rf .config/qt6ct $HOME/.config
+cp -rf .config/xsettingsd $HOME/.config
+cp -rf .config/starship $HOME/.config
+cp -rf .config/starship.toml $HOME/.config
+cp -rf home/.gtkrc-2.0 $HOME
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d ~/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d ~/.local/share/themes
@@ -377,5 +384,5 @@ sudo systemctl enable bluetooth.service
 ## clean                                              
 ##############################################################################
 cd ..
-# rm -rf $workDirName
+rm -rf $workDirName
 log_prompt "SUCCESS" && echo "Installation de Hyprland terminé redémarrer votre systeme" && echo ""
