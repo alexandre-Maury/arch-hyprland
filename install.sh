@@ -76,12 +76,12 @@ if [[ "$PARU" == "On" ]]; then
 fi
 
 ##############################################################################
-## Installation des utilitaires (libnotify - mako - lxappearance- gedit)   kdialog kde-gtk-config                                        
+## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell)                                    
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-kde-agent btop kitty starship nemo which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors
+yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-gnome btop kitty starship nemo which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors gnome-tweaks gnome-text-editor
 yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum kvantum-qt5 qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack pamixer pavucontrol bluez bluez-utils blueman        
-yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts nwg-look gtk-engine-murrine
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts gtk-engine-murrine 
 
 ## sddm
 yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
@@ -329,24 +329,24 @@ log_prompt "INFO" && echo "Configuration du systemes" && echo ""
 git clone --recursive https://github.com/alexandre-Maury/dotfiles.git $workDirName/dotfiles
 cd $workDirName/dotfiles
 
-cp -rf .config/cava $HOME/.config
 cp -rf .config/hypr $HOME/.config
 cp -rf .config/kitty $HOME/.config
-cp -rf .config/Kvantum $HOME/.config
-cp -rf .config/macchina $HOME/.config
-cp -rf .config/nvim $HOME/.config
 cp -rf .config/rofi $HOME/.config
 cp -rf .config/swaync $HOME/.config
-cp -rf .config/nwg-look $HOME/.config
 cp -rf .config/waybar $HOME/.config
+# cp -rf .config/Kvantum $HOME/.config
+# cp -rf .config/macchina $HOME/.config
+# cp -rf .config/nvim $HOME/.config
 # cp -rf .config/gtk-3.0 $HOME/.config
-cp -rf .config/gtk-4.0 $HOME/.config
-cp -rf .config/qt5ct $HOME/.config
-cp -rf .config/qt6ct $HOME/.config
+# cp -rf .config/gtk-4.0 $HOME/.config
+# cp -rf .config/qt5ct $HOME/.config
+# cp -rf .config/qt6ct $HOME/.config
 # cp -rf .config/xsettingsd $HOME/.config
-cp -rf .config/starship $HOME/.config
-cp -rf .config/starship.toml $HOME/.config
+# cp -rf .config/starship $HOME/.config
+# cp -rf .config/starship.toml $HOME/.config
 # cp -rf home/.gtkrc-2.0 $HOME
+# cp -rf .config/cava $HOME/.config
+# cp -rf .config/nwg-look $HOME/.config
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
@@ -370,14 +370,14 @@ chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
 
 kitty +kitten themes --reload-in=all $KITTY
 
-# gsettings set org.gnome.desktop.interface gtk-theme "Rosepine-Dark"
-# gsettings set org.gnome.desktop.wm.preferences theme "Rosepine-Dark"
-# gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
-# gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
-# gsettings set org.gnome.desktop.interface icon-theme "Catppuccin-Mocha"
-# gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Thin 11"
-# gsettings set org.gnome.desktop.wm.preferences titlebar-font "JetBrainsMono Nerd Font Thin 11"
-# gsettings set org.gnome.desktop.interface document-font-name "JetBrainsMono Nerd Font Thin 11"
+gsettings set org.gnome.desktop.interface gtk-theme "Rosepine-Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "Rosepine-Dark"
+gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
+gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
+gsettings set org.gnome.desktop.interface icon-theme "Catppuccin-Mocha"
+gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Thin 11"
+gsettings set org.gnome.desktop.wm.preferences titlebar-font "JetBrainsMono Nerd Font Thin 11"
+gsettings set org.gnome.desktop.interface document-font-name "JetBrainsMono Nerd Font Thin 11"
 
 # gsettings set org.gnome.desktop.wm.preferences button-layout "close,maximize,minimize:"
 
