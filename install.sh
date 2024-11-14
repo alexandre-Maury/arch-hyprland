@@ -2,9 +2,6 @@
 
 ###################################################################################
 # https://github.com/EliverLara/Shades-of-purple-gtk
-
-
-# THEMES --
 # https://github.com/SirEthanator/Hyprland-Dots/tree/main --> PRIORITAIRE
 
 
