@@ -339,14 +339,14 @@ cp -rf .config/rofi $HOME/.config
 cp -rf .config/swaync $HOME/.config
 cp -rf .config/nwg-look $HOME/.config
 cp -rf .config/waybar $HOME/.config
-cp -rf .config/gtk-3.0 $HOME/.config
+# cp -rf .config/gtk-3.0 $HOME/.config
 cp -rf .config/gtk-4.0 $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
-cp -rf .config/xsettingsd $HOME/.config
+# cp -rf .config/xsettingsd $HOME/.config
 cp -rf .config/starship $HOME/.config
 cp -rf .config/starship.toml $HOME/.config
-cp -rf home/.gtkrc-2.0 $HOME
+# cp -rf home/.gtkrc-2.0 $HOME
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
@@ -368,15 +368,20 @@ chmod +x $HOME/.config/waybar/scripts/volume.sh
 chmod +x $HOME/.config/hypr/scripts/screenshot.sh
 chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
 
-
-
-# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
-
 kitty +kitten themes --reload-in=all $KITTY
 
-# gsettings set org.gnome.desktop.interface gtk-theme "Sweet"
-# gsettings set org.gnome.desktop.wm.preferences theme "Sweet"
+# gsettings set org.gnome.desktop.interface gtk-theme "Rosepine-Dark"
+# gsettings set org.gnome.desktop.wm.preferences theme "Rosepine-Dark"
+# gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
 # gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
+# gsettings set org.gnome.desktop.interface icon-theme "Catppuccin-Mocha"
+# gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Thin 11"
+# gsettings set org.gnome.desktop.wm.preferences titlebar-font "JetBrainsMono Nerd Font Thin 11"
+# gsettings set org.gnome.desktop.interface document-font-name "JetBrainsMono Nerd Font Thin 11"
+
+# gsettings set org.gnome.desktop.wm.preferences button-layout "close,maximize,minimize:"
+
+# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
 ##############################################################################
 ## Activation des services                                              
