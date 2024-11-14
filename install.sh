@@ -376,6 +376,7 @@ kitty +kitten themes --reload-in=all $KITTY
 
 # gsettings set org.gnome.desktop.interface gtk-theme "Sweet"
 # gsettings set org.gnome.desktop.wm.preferences theme "Sweet"
+# gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
 
 ##############################################################################
 ## Activation des services                                              
