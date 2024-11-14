@@ -58,4 +58,6 @@ URL_CURSORS=(
 SDDM="https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip"
 SDDM_THEME_NAME="catppuccin-mocha" # Penser à modifier dans : $SCRIPT_DIR/misc/dots/etc/sddm.conf
 
+KITTY="Rosé Pine" # Catppuccin-Macchiato - Catppuccin-Mocha - Rosé Pine
+
 

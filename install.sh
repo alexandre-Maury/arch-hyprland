@@ -6,7 +6,7 @@
 
 # THEMES --
 # https://github.com/SirEthanator/Hyprland-Dots/tree/main --> PRIORITAIRE
-# https://github.com/orgs/catppuccin/repositories
+
 
 ###################################################################################
 
@@ -375,10 +375,10 @@ chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
 
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
-kitty +kitten themes --reload-in=all Rosé Pine
-# kitty +kitten themes --reload-in=all Catppuccin-Macchiato
-# kitty +kitten themes --reload-in=all Catppuccin-Mocha
+kitty +kitten themes --reload-in=all $KITTY
 
+# gsettings set org.gnome.desktop.interface gtk-theme "Sweet"
+# gsettings set org.gnome.desktop.wm.preferences theme "Sweet"
 
 ##############################################################################
 ## Activation des services                                              
