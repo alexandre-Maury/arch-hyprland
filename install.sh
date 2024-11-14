@@ -370,16 +370,7 @@ chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
 
 kitty +kitten themes --reload-in=all $KITTY
 
-gsettings set org.gnome.desktop.interface gtk-theme "Rosepine-Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "Rosepine-Dark"
-gsettings set org.gnome.desktop.interface cursor-theme "BreezeX-RosePine-Linux"
-gsettings set org.gnome.desktop.interface icon-theme "candy-icons"
-gsettings set org.gnome.desktop.interface icon-theme "Catppuccin-Mocha"
-gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font Thin 11"
-gsettings set org.gnome.desktop.wm.preferences titlebar-font "JetBrainsMono Nerd Font Thin 11"
-gsettings set org.gnome.desktop.interface document-font-name "JetBrainsMono Nerd Font Thin 11"
 
-# gsettings set org.gnome.desktop.wm.preferences button-layout "close,maximize,minimize:"
 
 # sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
 
