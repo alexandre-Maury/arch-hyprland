@@ -186,8 +186,6 @@ done
 # sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes
 
 
-
-
 ##############################################################################
 ## hyprshot                                               
 ##############################################################################
@@ -334,19 +332,15 @@ cp -rf .config/kitty $HOME/.config
 cp -rf .config/rofi $HOME/.config
 cp -rf .config/swaync $HOME/.config
 cp -rf .config/waybar $HOME/.config
-# cp -rf .config/Kvantum $HOME/.config
+cp -rf .config/starship $HOME/.config
+cp -rf .config/starship.toml $HOME/.config
+cp -rf .config/qt5ct $HOME/.config
+cp -rf .config/qt6ct $HOME/.config
 # cp -rf .config/macchina $HOME/.config
 # cp -rf .config/nvim $HOME/.config
-# cp -rf .config/gtk-3.0 $HOME/.config
-# cp -rf .config/gtk-4.0 $HOME/.config
-# cp -rf .config/qt5ct $HOME/.config
-# cp -rf .config/qt6ct $HOME/.config
-# cp -rf .config/xsettingsd $HOME/.config
-# cp -rf .config/starship $HOME/.config
-# cp -rf .config/starship.toml $HOME/.config
-# cp -rf home/.gtkrc-2.0 $HOME
 # cp -rf .config/cava $HOME/.config
-# cp -rf .config/nwg-look $HOME/.config
+# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
+
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
@@ -369,10 +363,8 @@ chmod +x $HOME/.config/hypr/scripts/screenshot.sh
 chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
 
 kitty +kitten themes --reload-in=all $KITTY
-
-
-
-# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
+# echo "$(starship init zsh)" >> $HOME/.zshrc
+echo "$(starship init bash)" >> $HOME/.bashrc
 
 ##############################################################################
 ## Activation des services                                              
