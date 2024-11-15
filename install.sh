@@ -79,7 +79,7 @@ fi
 ## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell)                                    
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-gnome btop kitty starship nemo which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors gnome-tweaks gnome-text-editor
+yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-gnome btop kitty nemo which neofetch macchina yad rustup firefox brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors gnome-tweaks gnome-text-editor
 yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum qt5-wayland qt6-wayland qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol bluez bluez-utils blueman        
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts gtk-engine-murrine 
 
@@ -332,14 +332,9 @@ cp -rf .config/kitty $HOME/.config
 cp -rf .config/rofi $HOME/.config
 cp -rf .config/swaync $HOME/.config
 cp -rf .config/waybar $HOME/.config
-cp -rf .config/starship $HOME/.config
-cp -rf .config/starship.toml $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
-# cp -rf .config/macchina $HOME/.config
-# cp -rf .config/nvim $HOME/.config
-# cp -rf .config/cava $HOME/.config
-# sudo cp -rf $SCRIPT_DIR/misc/dots/etc/sddm.conf /etc/sddm.conf
+
 
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
@@ -363,8 +358,7 @@ chmod +x $HOME/.config/hypr/scripts/screenshot.sh
 chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
 
 kitty +kitten themes --reload-in=all $KITTY
-# echo "$(starship init zsh)" >> $HOME/.zshrc
-echo "$(starship init bash)" >> $HOME/.bashrc
+
 
 ##############################################################################
 ## Activation des services                                              
