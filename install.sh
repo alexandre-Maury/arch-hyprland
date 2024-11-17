@@ -358,8 +358,10 @@ kitty +kitten themes --reload-in=all $KITTY
 ## Activation des services                                              
 ##############################################################################
 # sudo systemctl enable sddm
-sudo systemctl enable NetworkManager.service
-sudo systemctl enable bluetooth.service
+systemctl --user enable NetworkManager.service
+systemctl --user enable bluetooth.service
+systemctl --user enable pipewire.service 
+systemctl --user enable wireplumber.service 
 
 
 
