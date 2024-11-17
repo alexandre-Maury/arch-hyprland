@@ -80,8 +80,7 @@ fi
 ## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell)                                    
 ##############################################################################
 
-# 1. Environnement de Bureau / Gestion de l'Interface : Ces paquets sont liés à l'interface graphique et à l'environnement de bureau :
-
+log_prompt "INFO" && echo "1. Environnement de Bureau / Gestion de l'Interface : Ces paquets sont liés à l'interface graphique et à l'environnement de bureau :" && echo ""
 ### waybar : Barre de statut pour Wayland.
 ### gnome-tweaks : Outil de personnalisation pour GNOME.
 ### gnome-text-editor : Éditeur de texte pour GNOME.
@@ -97,8 +96,7 @@ fi
 yay -S --needed --noconfirm --ask=4 waybar gnome-tweaks gnome-text-editor nemo swaync rofi-wayland wofi wofi-emoji wlogout slurp grim swww
 
 
-# 2. Outils Système et Utilitaires : Ces paquets concernent des outils d'administration système, de configuration et de surveillance :
-
+log_prompt "INFO" && echo "2. Outils Système et Utilitaires : Ces paquets concernent des outils d'administration système, de configuration et de surveillance :" && echo ""
 ### polkit-gnome : Interface graphique pour Polkit (gestion des permissions).
 ### jq : Outil de manipulation de JSON.
 ### bc : Calculatrice de base en ligne de commande.
@@ -111,8 +109,7 @@ yay -S --needed --noconfirm --ask=4 waybar gnome-tweaks gnome-text-editor nemo s
 yay -S --needed --noconfirm --ask=4 polkit-gnome jq bc yad unzip which btop indicator-sensors brightnessctl
 
 
-# 3. Gestion des Réseaux et Connexions : Paquets relatifs à la gestion du réseau, des connexions sans fil et des périphériques Bluetooth :
-
+log_prompt "INFO" && echo "3. Gestion des Réseaux et Connexions : Paquets relatifs à la gestion du réseau, des connexions sans fil et des périphériques Bluetooth :" && echo ""
 ### wpa_supplicant : Gestion des connexions Wi-Fi.
 ### iwd : Client Wi-Fi pour Linux.
 ### networkmanager : Gestionnaire de réseau.
@@ -124,8 +121,7 @@ yay -S --needed --noconfirm --ask=4 polkit-gnome jq bc yad unzip which btop indi
 yay -S --needed --noconfirm --ask=4 wpa_supplicant iwd iw networkmanager network-manager-applet nm-connection-editor bluez bluez-utils blueman
 
 
-# 4. Audio et Multimédia : Paquets relatifs à la gestion de l'audio et du multimédia :
-
+log_prompt "INFO" && echo "4. Audio et Multimédia : Paquets relatifs à la gestion de l'audio et du multimédia :" && echo ""
 ### pipewire : Serveur multimédia pour audio/vidéo sous Wayland.
 ### pipewire-alsa : Interface ALSA pour PipeWire.
 ### pipewire-pulse : Interface PulseAudio pour PipeWire.
@@ -136,8 +132,7 @@ yay -S --needed --noconfirm --ask=4 wpa_supplicant iwd iw networkmanager network
 yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol
 
 
-# 5. Applications et Développement : Paquets associés aux applications, environnements de développement et outils d'interface utilisateur :
-
+log_prompt "INFO" && echo "5. Applications et Développement : Paquets associés aux applications, environnements de développement et outils d'interface utilisateur :" && echo ""
 ### firefox : Navigateur web populaire.
 ### thorium-browser-bin : Version binaire du navigateur Thorium.
 ### kitty : Terminal moderne (supporte Wayland/X11).
@@ -147,8 +142,7 @@ yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-pulse pipewi
 yay -S --needed --noconfirm --ask=4 firefox thorium-browser-bin kitty rustup libappindicator-gtk3 libindicator-gtk3
 
 
-# 6. Thèmes, Polices et Apparence : Paquets relatifs aux thèmes, aux polices et à l'apparence des applications :
-
+log_prompt "INFO" && echo "6. Thèmes, Polices et Apparence : Paquets relatifs aux thèmes, aux polices et à l'apparence des applications :" && echo ""
 ### ttf-jetbrains-mono-nerd : Police JetBrains Mono avec icônes Nerd.
 ### noto-fonts : Collection de polices Noto.
 ### ocean-sound-theme : Thème sonore pour l'interface.
@@ -157,16 +151,14 @@ yay -S --needed --noconfirm --ask=4 firefox thorium-browser-bin kitty rustup lib
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd noto-fonts ocean-sound-theme gtk-engine-murrine gtk2 gtk3 gtk4
 
 
-# 7. Gestion de Presse-papiers et Utilitaires divers : Paquets relatifs à la gestion du presse-papiers et autres outils pratiques :
-
+log_prompt "INFO" && echo "7. Gestion de Presse-papiers et Utilitaires divers : Paquets relatifs à la gestion du presse-papiers et autres outils pratiques :" && echo ""
 ### wl-clipboard : Gestionnaire de presse-papiers pour Wayland.
 ### macchina : Outil d'affichage des informations système en ligne de commande.
 ### neofetch : Affiche des informations système dans le terminal (bannière ASCII, etc.).
 yay -S --needed --noconfirm --ask=4 wl-clipboard macchina neofetch
 
 
-# 8. Frameworks Qt : Paquets relatifs aux bibliothèques Qt, souvent utilisées pour les applications de bureau sous Linux :
-
+log_prompt "INFO" && echo "8. Frameworks Qt : Paquets relatifs aux bibliothèques Qt, souvent utilisées pour les applications de bureau sous Linux :" && echo ""
 ### qt5-wayland : Support Wayland pour les applications Qt5.
 ### qt6-wayland : Support Wayland pour les applications Qt6.
 ### qt5ct : Configuration des applications Qt5.
