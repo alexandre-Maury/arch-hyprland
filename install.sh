@@ -30,7 +30,7 @@ export PATH=~/.local/bin:$PATH
 ##############################################################################
 ## Information Utilisateur                                              
 ##############################################################################
-log_prompt "INFO" && read -p "Quel est votre nom d'utilisateur : " USER && echo ""
+# log_prompt "INFO" && read -p "Quel est votre nom d'utilisateur : " USER && echo ""
 
 ##############################################################################
 ## arch-chroot Définir le fuseau horaire + local                                                  
@@ -80,11 +80,101 @@ fi
 ## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell)                                    
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-gnome btop kitty nemo which neofetch macchina yad rustup firefox thorium-browser-bin bc brightnessctl wpa_supplicant iw iwd networkmanager network-manager-applet nm-connection-editor indicator-sensors gnome-tweaks gnome-text-editor
-yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum qt5-wayland qt6-wayland qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol bluez bluez-utils blueman        
-yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts gtk-engine-murrine 
+# 1. Environnement de Bureau / Gestion de l'Interface : Ces paquets sont liés à l'interface graphique et à l'environnement de bureau :
 
-## sddm - uwsm
+### waybar : Barre de statut pour Wayland.
+### gnome-tweaks : Outil de personnalisation pour GNOME.
+### gnome-text-editor : Éditeur de texte pour GNOME.
+### nemo : Gestionnaire de fichiers GNOME.
+### swaync : Notifications pour Sway (Wayland).
+### rofi-wayland : Lanceur d'applications pour Wayland via Rofi.
+### wofi : Alternative à Rofi pour Wayland.
+### wofi-emoji : Sélecteur d'emoji pour Wofi.
+### wlogout : Outil de déconnexion pour Wayland.
+### slurp : Outil de sélection d'une zone d'écran (Wayland).
+### grim : Capture d'écran pour Wayland.
+### swww : Simple Wayland Window Switcher, pour changer de fenêtre dans Wayland.
+yay -S --needed --noconfirm --ask=4 waybar gnome-tweaks gnome-text-editor nemo swaync rofi-wayland wofi wofi-emoji wlogout slurp grim swww
+
+
+# 2. Outils Système et Utilitaires : Ces paquets concernent des outils d'administration système, de configuration et de surveillance :
+
+### polkit-gnome : Interface graphique pour Polkit (gestion des permissions).
+### jq : Outil de manipulation de JSON.
+### bc : Calculatrice de base en ligne de commande.
+### yad : Boîte de dialogue GTK+ pour les scripts.
+### unzip : Outil pour décompresser les fichiers ZIP.
+### which : Affiche le chemin d'exécution d'un programme.
+### btop : Moniteur de ressources système.
+### indicator-sensors : Affiche les données des capteurs matériels (température, charge CPU, etc.).
+### brightnessctl : Outil pour ajuster la luminosité de l'écran.
+yay -S --needed --noconfirm --ask=4 polkit-gnome jq bc yad unzip which btop indicator-sensors brightnessctl
+
+
+# 3. Gestion des Réseaux et Connexions : Paquets relatifs à la gestion du réseau, des connexions sans fil et des périphériques Bluetooth :
+
+### wpa_supplicant : Gestion des connexions Wi-Fi.
+### iwd : Client Wi-Fi pour Linux.
+### networkmanager : Gestionnaire de réseau.
+### network-manager-applet : Applet de gestion réseau pour GNOME.
+### nm-connection-editor : Outil pour gérer les connexions réseau via NetworkManager.
+### bluez : Stack Bluetooth pour Linux.
+### bluez-utils : Utilitaires pour gérer les périphériques Bluetooth.
+### blueman : Gestionnaire de connexions Bluetooth.
+yay -S --needed --noconfirm --ask=4 wpa_supplicant iwd iw networkmanager network-manager-applet nm-connection-editor bluez bluez-utils blueman
+
+
+# 4. Audio et Multimédia : Paquets relatifs à la gestion de l'audio et du multimédia :
+
+### pipewire : Serveur multimédia pour audio/vidéo sous Wayland.
+### pipewire-alsa : Interface ALSA pour PipeWire.
+### pipewire-pulse : Interface PulseAudio pour PipeWire.
+### pipewire-jack : Interface JACK pour PipeWire.
+### wireplumber : Gestionnaire de sessions pour PipeWire.
+### pamixer : Outil de contrôle du volume.
+### pavucontrol : Interface graphique de contrôle du volume (PulseAudio).
+yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol
+
+
+# 5. Applications et Développement : Paquets associés aux applications, environnements de développement et outils d'interface utilisateur :
+
+### firefox : Navigateur web populaire.
+### thorium-browser-bin : Version binaire du navigateur Thorium.
+### kitty : Terminal moderne (supporte Wayland/X11).
+### rustup : Gestionnaire de versions de Rust.
+### libappindicator-gtk3 : Indicateur d'application pour GTK3.
+### libindicator-gtk3 : Indicateur d'application pour GTK3.
+yay -S --needed --noconfirm --ask=4 firefox thorium-browser-bin kitty rustup libappindicator-gtk3 libindicator-gtk3
+
+
+# 6. Thèmes, Polices et Apparence : Paquets relatifs aux thèmes, aux polices et à l'apparence des applications :
+
+### ttf-jetbrains-mono-nerd : Police JetBrains Mono avec icônes Nerd.
+### noto-fonts : Collection de polices Noto.
+### ocean-sound-theme : Thème sonore pour l'interface.
+### gtk-engine-murrine : Moteur de thème pour GTK2.
+### gtk2 - gtk3 - gtk4: Bibliothèque graphique.
+yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd noto-fonts ocean-sound-theme gtk-engine-murrine gtk2 gtk3 gtk4
+
+
+# 7. Gestion de Presse-papiers et Utilitaires divers : Paquets relatifs à la gestion du presse-papiers et autres outils pratiques :
+
+### wl-clipboard : Gestionnaire de presse-papiers pour Wayland.
+### macchina : Outil d'affichage des informations système en ligne de commande.
+### neofetch : Affiche des informations système dans le terminal (bannière ASCII, etc.).
+yay -S --needed --noconfirm --ask=4 wl-clipboard macchina neofetch
+
+
+# 8. Frameworks Qt : Paquets relatifs aux bibliothèques Qt, souvent utilisées pour les applications de bureau sous Linux :
+
+### qt5-wayland : Support Wayland pour les applications Qt5.
+### qt6-wayland : Support Wayland pour les applications Qt6.
+### qt5ct : Configuration des applications Qt5.
+### qt6ct : Configuration des applications Qt6.
+### kvantum : Gestionnaire de thèmes pour Qt (peut être utilisé avec GTK via un plugin).
+yay -S --needed --noconfirm --ask=4 qt5-wayland qt6-wayland qt5ct qt6ct kvantum
+
+## sddm 
 yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2 qt5-svg qt5-declarative qt5-graphicaleffects
 
 ## hypridle                                       
