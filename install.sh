@@ -25,7 +25,7 @@ mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/fonts
 mkdir -p ~/.local/bin
 
-export PATH=~/.local/bin:$PATH
+# export PATH=~/.local/bin:$PATH
 
 # ##############################################################################
 # ## Information Utilisateur                                              
@@ -317,42 +317,46 @@ export PATH=~/.local/bin:$PATH
 # cd ..
 
 
-##############################################################################
-## Configuration                                              
-##############################################################################
-log_prompt "INFO" && echo "Configuration du systemes" && echo ""
-git clone --recursive https://github.com/alexandre-Maury/dotfiles.git $workDirName/dotfiles
-cd $workDirName/dotfiles
+# ##############################################################################
+# ## Configuration                                              
+# ##############################################################################
+# log_prompt "INFO" && echo "Configuration du systemes" && echo ""
+# git clone --recursive https://github.com/alexandre-Maury/dotfiles.git $workDirName/dotfiles
+# cd $workDirName/dotfiles
 
-cp -rf .config/hypr $HOME/.config
-cp -rf .config/kitty $HOME/.config
-cp -rf .config/rofi $HOME/.config
-cp -rf .config/swaync $HOME/.config
-cp -rf .config/waybar $HOME/.config
-cp -rf .config/qt5ct $HOME/.config
-cp -rf .config/qt6ct $HOME/.config
+# cp -rf .config/hypr $HOME/.config
+# cp -rf .config/kitty $HOME/.config
+# cp -rf .config/rofi $HOME/.config
+# cp -rf .config/swaync $HOME/.config
+# cp -rf .config/waybar $HOME/.config
+# cp -rf .config/qt5ct $HOME/.config
+# cp -rf .config/qt6ct $HOME/.config
 
-unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
-unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
-unzip .themes/Rosepine-GTK.zip -d $HOME/.local/share/themes
+# unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
+# unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
+# unzip .themes/Rosepine-GTK.zip -d $HOME/.local/share/themes
 
-unzip .icons/Catppuccin-Macchiato-Icon.zip -d $HOME/.local/share/icons
-unzip .icons/Catppuccin-Mocha-Icon.zip -d $HOME/.local/share/icons
-unzip .icons/Rosepine-Icon.zip -d $HOME/.local/share/icons
+# unzip .icons/Catppuccin-Macchiato-Icon.zip -d $HOME/.local/share/icons
+# unzip .icons/Catppuccin-Mocha-Icon.zip -d $HOME/.local/share/icons
+# unzip .icons/Rosepine-Icon.zip -d $HOME/.local/share/icons
 
-cp -rf Scripts $HOME # dossier laboratoire
+# cp -rf Scripts $HOME # dossier laboratoire
 
-chmod +x $HOME/.config/waybar/scripts/backlight.sh
-chmod +x $HOME/.config/waybar/scripts/ip_checker.sh
-chmod +x $HOME/.config/waybar/scripts/microphone.sh
-chmod +x $HOME/.config/waybar/scripts/power.sh
-chmod +x $HOME/.config/waybar/scripts/system.sh
-chmod +x $HOME/.config/waybar/scripts/volume.sh
+# chmod +x $HOME/.config/waybar/scripts/backlight.sh
+# chmod +x $HOME/.config/waybar/scripts/ip_checker.sh
+# chmod +x $HOME/.config/waybar/scripts/microphone.sh
+# chmod +x $HOME/.config/waybar/scripts/power.sh
+# chmod +x $HOME/.config/waybar/scripts/system.sh
+# chmod +x $HOME/.config/waybar/scripts/volume.sh
 
-chmod +x $HOME/.config/hypr/scripts/screenshot.sh
-chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
+# chmod +x $HOME/.config/hypr/scripts/screenshot.sh
+# chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
 
-kitty +kitten themes --reload-in=all $KITTY
+# kitty +kitten themes --reload-in=all $KITTY
+
+sudo cp -rf etc/sddm/sddm-rose-pine /usr/share/sddm/themes
+sudo mkdir -p /etc/sddm.conf.d
+sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
 
 
 ##############################################################################
