@@ -26,6 +26,8 @@ mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/fonts
 mkdir -p ~/.local/bin
 
+export PATH=~/.local/bin:$PATH
+
 ##############################################################################
 ## Information Utilisateur                                              
 ##############################################################################
@@ -79,7 +81,7 @@ fi
 ## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell)                                    
 ##############################################################################
 
-yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-gnome btop kitty nemo which neofetch macchina yad rustup firefox thorium-browser-bin brightnessctl networkmanager network-manager-applet nm-connection-editor indicator-sensors gnome-tweaks gnome-text-editor
+yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk3 polkit-gnome btop kitty nemo which neofetch macchina yad rustup firefox thorium-browser-bin bc brightnessctl wpa_supplicant iw iwd networkmanager network-manager-applet nm-connection-editor indicator-sensors gnome-tweaks gnome-text-editor
 yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum qt5-wayland qt6-wayland qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol bluez bluez-utils blueman        
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts gtk-engine-murrine 
 
@@ -358,6 +360,8 @@ kitty +kitten themes --reload-in=all $KITTY
 # sudo systemctl enable sddm
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable bluetooth.service
+
+
 
 
 ##############################################################################
