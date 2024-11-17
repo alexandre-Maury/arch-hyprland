@@ -106,7 +106,8 @@ log_prompt "INFO" && echo "2. Outils Système et Utilitaires : Ces paquets conce
 ### btop : Moniteur de ressources système.
 ### indicator-sensors : Affiche les données des capteurs matériels (température, charge CPU, etc.).
 ### brightnessctl : Outil pour ajuster la luminosité de l'écran.
-yay -S --needed --noconfirm --ask=4 polkit-gnome jq bc yad unzip which btop indicator-sensors brightnessctl
+### udiskie : Outil qui facilite la gestion automatique des périphériques de stockage amovibles (comme les clés USB et les disques durs externes).
+yay -S --needed --noconfirm --ask=4 polkit-gnome jq bc yad unzip which btop indicator-sensors brightnessctl udiskie
 
 
 log_prompt "INFO" && echo "3. Gestion des Réseaux et Connexions : Paquets relatifs à la gestion du réseau, des connexions sans fil et des périphériques Bluetooth :" && echo ""
@@ -400,6 +401,7 @@ cp -rf .config/swaync $HOME/.config
 cp -rf .config/waybar $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
+cp -rf .config/udiskie $HOME/.config
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
@@ -419,15 +421,11 @@ sudo mkdir -p /etc/sddm.conf.d
 sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
 sudo cp -rf etc/sddm/Xsetup /usr/share/sddm/scripts
 
-chmod +x $HOME/.config/waybar/scripts/backlight.sh
-chmod +x $HOME/.config/waybar/scripts/ip_checker.sh
-chmod +x $HOME/.config/waybar/scripts/microphone.sh
-chmod +x $HOME/.config/waybar/scripts/power.sh
-chmod +x $HOME/.config/waybar/scripts/system.sh
-chmod +x $HOME/.config/waybar/scripts/volume.sh
+chmod -R +x $HOME/.config/waybar/scripts
+chmod -R +x $HOME/.config/hypr/scripts
 
-chmod +x $HOME/.config/hypr/scripts/screenshot.sh
-chmod +x $HOME/.config/hypr/scripts/storeBrightness.sh
+
+
 
 kitty +kitten themes --reload-in=all $KITTY
 
