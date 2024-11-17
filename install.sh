@@ -84,7 +84,7 @@ yay -S --needed --noconfirm --ask=4 waybar libappindicator-gtk3 libindicator-gtk
 yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzip wofi wofi-emoji rofi-wayland kvantum qt5-wayland qt6-wayland qt5ct qt6ct gtk2 gtk3 gtk4 swaync pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol bluez bluez-utils blueman        
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts gtk-engine-murrine 
 
-## sddm
+## sddm - uwsm
 yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2 qt5-svg qt5-declarative qt5-graphicaleffects
 
 ## hypridle                                       
@@ -174,13 +174,15 @@ done
 ##############################################################################
 ## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         
 ##############################################################################
-# wget ${SDDM} -O $workDirName/catppuccin.zip
-# sudo mkdir -p /usr/share/sddm/themes/${SDDM_THEME_NAME}
-# sudo unzip $workDirName/catppuccin.zip -d /usr/share/sddm/themes
+sudo cp -rf etc/sddm/rose-pine-sddm /usr/share/sddm/themes
+sudo cp -rf etc/sddm/catppuccin-macchiato /usr/share/sddm/themes
+sudo cp -rf etc/sddm/catppuccin-mocha /usr/share/sddm/themes
 
-sudo cp -rf etc/sddm/sddm-rose-pine /usr/share/sddm/themes
 sudo mkdir -p /etc/sddm.conf.d
 sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
+sudo cp -rf etc/sddm/Xsetup /usr/share/sddm/scripts
+
+
 
 
 ##############################################################################

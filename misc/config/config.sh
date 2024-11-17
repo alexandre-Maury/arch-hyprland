@@ -48,16 +48,6 @@ URL_CURSORS=(
   "https://github.com/rose-pine/cursor/releases/download/v1.1.0/BreezeX-RosePine-Linux.tar.xz"
 )
 
-# wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="$HOME/.local/share/icons" sh
-
-
-# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-frappe.zip
-# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-latte.zip
-# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-macchiato.zip
-# https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip
-SDDM="https://github.com/catppuccin/sddm/releases/download/v1.0.0/catppuccin-mocha.zip"
-SDDM_THEME_NAME="catppuccin-mocha" # Penser à modifier dans : $SCRIPT_DIR/misc/dots/etc/sddm.conf
-
 KITTY="Rosé Pine" # Catppuccin-Macchiato - Catppuccin-Mocha - Rosé Pine
 
 
