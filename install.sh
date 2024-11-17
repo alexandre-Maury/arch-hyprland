@@ -85,7 +85,7 @@ yay -S --needed --noconfirm --ask=4 wl-clipboard slurp grim jq swww wlogout unzi
 yay -S --needed --noconfirm --ask=4 ttf-jetbrains-mono-nerd ocean-sound-theme noto-fonts gtk-engine-murrine 
 
 ## sddm
-yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2
+yay -S --needed --noconfirm --ask=4 sddm qt6-svg qt6-declarative qt5-quickcontrols2 qt5-svg qt5-declarative qt5-graphicaleffects
 
 ## hypridle                                       
 yay -S --needed --noconfirm --ask=4 mesa wayland-protocols wayland 
@@ -328,7 +328,9 @@ cp -rf .config/waybar $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
 
-
+sudo cp -rf etc/sddm/sddm-rose-pine /usr/share/sddm/themes
+sudo mkdir -p /etc/sddm.conf.d
+sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
@@ -356,9 +358,9 @@ kitty +kitten themes --reload-in=all $KITTY
 ##############################################################################
 ## Activation des services                                              
 ##############################################################################
-# systemctl --user enable sddm
-systemctl --user enable NetworkManager.service
-systemctl --user enable bluetooth.service
+sudo systemctl enable sddm
+sudo systemctl enable NetworkManager.service
+sudo systemctl enable bluetooth.service
 systemctl --user enable pipewire.service 
 systemctl --user enable wireplumber.service 
 
