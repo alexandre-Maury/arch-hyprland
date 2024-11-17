@@ -14,7 +14,6 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 source $SCRIPT_DIR/misc/config/config.sh # Inclure le fichier de configuration.
 source $SCRIPT_DIR/misc/scripts/functions.sh  # Charge les fonctions définies dans le fichier fonction.sh.
 
-# WORK IN TEMP DIR
 workDirName="${HOME}/buildHypr";
 rm -rf $workDirName
 
@@ -357,7 +356,7 @@ kitty +kitten themes --reload-in=all $KITTY
 ##############################################################################
 ## Activation des services                                              
 ##############################################################################
-# sudo systemctl enable sddm
+# systemctl --user enable sddm
 systemctl --user enable NetworkManager.service
 systemctl --user enable bluetooth.service
 systemctl --user enable pipewire.service 
