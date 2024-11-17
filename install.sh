@@ -320,9 +320,9 @@ mkdir -p ~/.local/bin
 # ##############################################################################
 # ## Configuration                                              
 # ##############################################################################
-# log_prompt "INFO" && echo "Configuration du systemes" && echo ""
-# git clone --recursive https://github.com/alexandre-Maury/dotfiles.git $workDirName/dotfiles
-# cd $workDirName/dotfiles
+log_prompt "INFO" && echo "Configuration du systemes" && echo ""
+git clone --recursive https://github.com/alexandre-Maury/dotfiles.git $workDirName/dotfiles
+cd $workDirName/dotfiles
 
 # cp -rf .config/hypr $HOME/.config
 # cp -rf .config/kitty $HOME/.config
