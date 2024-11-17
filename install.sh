@@ -170,21 +170,6 @@ for url in "${URL_CURSORS[@]}"; do
 
 done
 
-
-##############################################################################
-## SDDM Installation : https://wiki.archlinux.org/title/SDDM_(Fran%C3%A7ais)                                         
-##############################################################################
-sudo cp -rf etc/sddm/rose-pine-sddm /usr/share/sddm/themes
-sudo cp -rf etc/sddm/catppuccin-macchiato /usr/share/sddm/themes
-sudo cp -rf etc/sddm/catppuccin-mocha /usr/share/sddm/themes
-
-sudo mkdir -p /etc/sddm.conf.d
-sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
-sudo cp -rf etc/sddm/Xsetup /usr/share/sddm/scripts
-
-
-
-
 ##############################################################################
 ## hyprshot                                               
 ##############################################################################
@@ -343,6 +328,14 @@ unzip .icons/Catppuccin-Mocha-Icon.zip -d $HOME/.local/share/icons
 unzip .icons/Rosepine-Icon.zip -d $HOME/.local/share/icons
 
 cp -rf Scripts $HOME # dossier laboratoire
+
+sudo cp -rf etc/sddm/rose-pine-sddm /usr/share/sddm/themes
+sudo cp -rf etc/sddm/catppuccin-macchiato /usr/share/sddm/themes
+sudo cp -rf etc/sddm/catppuccin-mocha /usr/share/sddm/themes
+
+sudo mkdir -p /etc/sddm.conf.d
+sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
+sudo cp -rf etc/sddm/Xsetup /usr/share/sddm/scripts
 
 chmod +x $HOME/.config/waybar/scripts/backlight.sh
 chmod +x $HOME/.config/waybar/scripts/ip_checker.sh
