@@ -110,7 +110,7 @@ log_prompt "INFO" && echo "2. Outils Système et Utilitaires : Ces paquets conce
 ### indicator-sensors : Affiche les données des capteurs matériels (température, charge CPU, etc.).
 ### brightnessctl : Outil pour ajuster la luminosité de l'écran.
 ### udiskie : Outil qui facilite la gestion automatique des périphériques de stockage amovibles (comme les clés USB et les disques durs externes).
-yay -S --needed --noconfirm --ask=4 polkit-gnome jq bc yad unzip which btop indicator-sensors brightnessctl udiskie
+yay -S --needed --noconfirm --ask=4 polkit-gnome jq bc yad unzip p7zip unrar which btop indicator-sensors brightnessctl udiskie
 
 
 log_prompt "INFO" && echo "3. Gestion des Réseaux et Connexions : Paquets relatifs à la gestion du réseau, des connexions sans fil et des périphériques Bluetooth :" && echo ""
@@ -133,7 +133,7 @@ log_prompt "INFO" && echo "4. Audio et Multimédia : Paquets relatifs à la gest
 ### wireplumber : Gestionnaire de sessions pour PipeWire.
 ### pamixer : Outil de contrôle du volume.
 ### pavucontrol : Interface graphique de contrôle du volume (PulseAudio).
-yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol playerctl mpd mpv
+yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-audio pipewire-pulse gst-plugin-pipewire pipewire-jack wireplumber pamixer pavucontrol playerctl mpd mpv
 
 
 log_prompt "INFO" && echo "5. Applications et Développement : Paquets associés aux applications, environnements de développement et outils d'interface utilisateur :" && echo ""
