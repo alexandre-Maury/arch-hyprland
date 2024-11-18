@@ -428,9 +428,7 @@ chmod -R +x $HOME/.config/waybar/scripts
 chmod -R +x $HOME/.config/hypr/scripts
 
 
-
-
-kitty +kitten themes --reload-in=all $KITTY
+# kitty +kitten themes --reload-in=all $KITTY
 
 
 ##############################################################################
