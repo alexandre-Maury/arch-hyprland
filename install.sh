@@ -3,6 +3,9 @@
 ###################################################################################
 # https://github.com/EliverLara/Shades-of-purple-gtk
 # https://github.com/SirEthanator/Hyprland-Dots/tree/main --> PRIORITAIRE
+# https://github.com/POP303U/material/blob/main/setup-hypr/install --> PRIORITAIRE
+
+# probleme sur playerctl avec erreur No Players Found ==> https://github.com/altdesktop/playerctl
 
 
 ###################################################################################
@@ -130,7 +133,7 @@ log_prompt "INFO" && echo "4. Audio et Multimédia : Paquets relatifs à la gest
 ### wireplumber : Gestionnaire de sessions pour PipeWire.
 ### pamixer : Outil de contrôle du volume.
 ### pavucontrol : Interface graphique de contrôle du volume (PulseAudio).
-yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol
+yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pamixer pavucontrol playerctl mpd mpv
 
 
 log_prompt "INFO" && echo "5. Applications et Développement : Paquets associés aux applications, environnements de développement et outils d'interface utilisateur :" && echo ""
@@ -436,8 +439,10 @@ kitty +kitten themes --reload-in=all $KITTY
 sudo systemctl enable sddm
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable bluetooth.service
+sudo systemctl enable mpd.service 
 systemctl --user enable pipewire.service 
 systemctl --user enable wireplumber.service 
+
 
 
 
