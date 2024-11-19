@@ -80,7 +80,7 @@ if [[ "$PARU" == "On" ]]; then
 fi
 
 ##############################################################################
-## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell)                                    
+## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell - gnome-tweaks )                                    
 ##############################################################################
 
 log_prompt "INFO" && echo "1. Environnement de Bureau / Gestion de l'Interface : Ces paquets sont liés à l'interface graphique et à l'environnement de bureau :" && echo ""
@@ -96,7 +96,7 @@ log_prompt "INFO" && echo "1. Environnement de Bureau / Gestion de l'Interface :
 ### slurp : Outil de sélection d'une zone d'écran (Wayland).
 ### grim : Capture d'écran pour Wayland.
 ### swww : Simple Wayland Window Switcher, pour changer de fenêtre dans Wayland.
-yay -S --needed --noconfirm --ask=4 waybar gnome-tweaks gnome-text-editor nemo swaync rofi-wayland wofi wofi-emoji wlogout slurp grim swww
+yay -S --needed --noconfirm --ask=4 waybar nemo swaync rofi-wayland wofi wofi-emoji wlogout slurp grim swww gedit
 
 
 log_prompt "INFO" && echo "2. Outils Système et Utilitaires : Ces paquets concernent des outils d'administration système, de configuration et de surveillance :" && echo ""
