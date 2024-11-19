@@ -424,8 +424,16 @@ sudo mkdir -p /etc/sddm.conf.d
 sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
 sudo cp -rf etc/sddm/Xsetup /usr/share/sddm/scripts
 
-chmod -R +x $HOME/.config/waybar/scripts
-chmod -R +x $HOME/.config/hypr/scripts
+chmod +x $HOME/.config/waybar/scripts/backlight.sh
+chmod +x $HOME/.config/waybar/scripts/ip_checker.sh
+chmod +x $HOME/.config/waybar/scripts/microphone.sh
+chmod +x $HOME/.config/waybar/scripts/power.sh
+chmod +x $HOME/.config/waybar/scripts/system.sh
+chmod +x $HOME/.config/waybar/scripts/volume.sh
+
+chmod +x $HOME/.config/hypr/scripts/screenshot.sh
+chmod +x $HOME/.config/hypr/scripts/xdg-portal-hyprland.sh
+
 
 
 kitty +kitten themes --reload-in=all $KITTY
