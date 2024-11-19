@@ -414,7 +414,7 @@ unzip .icons/Catppuccin-Macchiato-Icon.zip -d $HOME/.local/share/icons
 unzip .icons/Catppuccin-Mocha-Icon.zip -d $HOME/.local/share/icons
 unzip .icons/Rosepine-Icon.zip -d $HOME/.local/share/icons
 
-cp -rf Scripts $HOME # dossier laboratoire
+cp -rf home/Scripts $HOME # dossier laboratoire
 
 sudo cp -rf etc/sddm/rose-pine-sddm /usr/share/sddm/themes
 sudo cp -rf etc/sddm/catppuccin-macchiato /usr/share/sddm/themes
