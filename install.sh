@@ -403,7 +403,8 @@ cp -rf .config/waybar $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
 cp -rf .config/udiskie $HOME/.config
-cp -rf .config/mpd $HOME/.config
+
+cp -rf .local/mpd $HOME/.local/share
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
@@ -432,9 +433,6 @@ chmod +x $HOME/.config/waybar/scripts/volume.sh
 
 chmod +x $HOME/.config/hypr/scripts/screenshot.sh
 chmod +x $HOME/.config/hypr/scripts/xdg-portal-hyprland.sh
-
-# sudo chown -R mpd:mpd $HOME/.config/mpd
-# sudo chown -R mpd:mpd $HOME/.local/share/music
 
 kitty +kitten themes --reload-in=all $KITTY
 
