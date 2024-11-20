@@ -80,13 +80,12 @@ if [[ "$PARU" == "On" ]]; then
 fi
 
 ##############################################################################
-## Installation des utilitaires (libnotify - nwg-look - mako - lxappearance - file-roller - gnome-shell - gnome-tweaks )                                    
+## Installation des utilitaires                                
 ##############################################################################
 
 log_prompt "INFO" && echo "1. Environnement de Bureau / Gestion de l'Interface : Ces paquets sont liés à l'interface graphique et à l'environnement de bureau :" && echo ""
 ### waybar : Barre de statut pour Wayland.
-### gnome-tweaks : Outil de personnalisation pour GNOME.
-### gnome-text-editor : Éditeur de texte pour GNOME.
+### gedit : Éditeur de texte pour GNOME.
 ### nemo : Gestionnaire de fichiers GNOME.
 ### swaync : Notifications pour Sway (Wayland).
 ### rofi-wayland : Lanceur d'applications pour Wayland via Rofi.
