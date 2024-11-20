@@ -433,8 +433,8 @@ chmod +x $HOME/.config/waybar/scripts/volume.sh
 chmod +x $HOME/.config/hypr/scripts/screenshot.sh
 chmod +x $HOME/.config/hypr/scripts/xdg-portal-hyprland.sh
 
-sudo chown -R mpd:mpd $HOME/.config/mpd
-sudo chown -R mpd:mpd $HOME/.local/share/music
+# sudo chown -R mpd:mpd $HOME/.config/mpd
+# sudo chown -R mpd:mpd $HOME/.local/share/music
 
 kitty +kitten themes --reload-in=all $KITTY
 
