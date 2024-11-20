@@ -21,11 +21,10 @@ workDirName="${HOME}/buildHypr";
 rm -rf $workDirName
 
 mkdir -p $workDirName
-mkdir -p ~/.config/gtk-3.0
-mkdir -p ~/.config/gtk-4.0
 mkdir -p ~/.local/share/themes
 mkdir -p ~/.local/share/icons
 mkdir -p ~/.local/share/fonts
+mkdir -p ~/.local/share/music
 mkdir -p ~/.local/bin
 
 export PATH=~/.local/bin:$PATH
@@ -132,7 +131,7 @@ log_prompt "INFO" && echo "4. Audio et Multimédia : Paquets relatifs à la gest
 ### wireplumber : Gestionnaire de sessions pour PipeWire.
 ### pamixer : Outil de contrôle du volume.
 ### pavucontrol : Interface graphique de contrôle du volume (PulseAudio). Ncmpcpp 
-yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-audio pipewire-pulse gst-plugin-pipewire pipewire-jack wireplumber pamixer pavucontrol playerctl mpd mpv
+yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-audio pipewire-pulse gst-plugin-pipewire pipewire-jack wireplumber pamixer pavucontrol playerctl mpd mpd-mpris ncmpcpp
 
 
 log_prompt "INFO" && echo "5. Applications et Développement : Paquets associés aux applications, environnements de développement et outils d'interface utilisateur :" && echo ""
@@ -404,6 +403,7 @@ cp -rf .config/waybar $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
 cp -rf .config/udiskie $HOME/.config
+cp -rf .config/mpd $HOME/.config
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
@@ -433,7 +433,8 @@ chmod +x $HOME/.config/waybar/scripts/volume.sh
 chmod +x $HOME/.config/hypr/scripts/screenshot.sh
 chmod +x $HOME/.config/hypr/scripts/xdg-portal-hyprland.sh
 
-
+sudo chown -R mpd:mpd $HOME/.config/mpd
+sudo chown -R mpd:mpd $HOME/.local/share/music
 
 kitty +kitten themes --reload-in=all $KITTY
 
