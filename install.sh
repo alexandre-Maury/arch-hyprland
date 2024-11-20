@@ -423,6 +423,10 @@ sudo mkdir -p /etc/sddm.conf.d
 sudo cp -rf etc/sddm/sddm.conf /etc/sddm.conf.d
 sudo cp -rf etc/sddm/Xsetup /usr/share/sddm/scripts
 
+sudo cp -rf etc/timidity /etc
+
+# sudo mkdir -p /etc/timidity && sudo touch /etc/timidity/timidity.cfg
+
 chmod +x $HOME/.config/waybar/scripts/backlight.sh
 chmod +x $HOME/.config/waybar/scripts/ip_checker.sh
 chmod +x $HOME/.config/waybar/scripts/microphone.sh
