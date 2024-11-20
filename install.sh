@@ -403,8 +403,7 @@ cp -rf .config/waybar $HOME/.config
 cp -rf .config/qt5ct $HOME/.config
 cp -rf .config/qt6ct $HOME/.config
 cp -rf .config/udiskie $HOME/.config
-
-cp -rf .local/mpd $HOME/.local/share
+cp -rf .config/mpd $HOME/.config
 
 unzip .themes/Catppuccin-Mocha-GTK.zip -d $HOME/.local/share/themes
 unzip .themes/Catppuccin-Macchiato-GTK.zip -d $HOME/.local/share/themes
