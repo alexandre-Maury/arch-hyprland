@@ -131,7 +131,7 @@ log_prompt "INFO" && echo "4. Audio et Multimédia : Paquets relatifs à la gest
 ### wireplumber : Gestionnaire de sessions pour PipeWire.
 ### pamixer : Outil de contrôle du volume.
 ### pavucontrol : Interface graphique de contrôle du volume (PulseAudio). Ncmpcpp 
-yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-audio pipewire-pulse gst-plugin-pipewire pipewire-jack wireplumber pamixer pavucontrol playerctl mpd mpd-mpris ncmpcpp vlc
+yay -S --needed --noconfirm --ask=4 pipewire pipewire-alsa pipewire-audio pipewire-pulse gst-plugin-pipewire pipewire-jack wireplumber pamixer pavucontrol playerctl mpd ncmpcpp vlc
 
 
 log_prompt "INFO" && echo "5. Applications et Développement : Paquets associés aux applications, environnements de développement et outils d'interface utilisateur :" && echo ""
