@@ -5,7 +5,7 @@ Ce projet a pour objectif d'installer et de configurer Hyprland, un compositeur 
 
 L'objectif est de mettre en place un système optimisé pour deux usages principaux : un environnement de développement et un environnement de pentesting. Ce projet propose ainsi une configuration polyvalente, adaptée aux besoins spécifiques de chaque contexte d'utilisation.
 
-Projet 1 : Installation de Base Arch Linux (Sans Interface Graphique) : https://github.com/alexandre-Maury/arch-install.git
+Projet 1 : Installation de Base Arch Linux (Sans Interface Graphique) : https://github.com/alexandre-Maury/arch-efi.git
 
 ## Visuels
 À venir
@@ -30,7 +30,7 @@ Suivez les étapes ci-dessous pour installer et configurer Arch Linux avec Hyprl
 
 ## Feuille de route
 
-1. Mise en place du système : [OK - https://github.com/alexandre-Maury/arch-install.git]
+1. Mise en place du système : [OK - https://github.com/alexandre-Maury/arch-efi.git]
 
 Mise en place d'Arch Linux avec les configurations réseau et de base pour un environnement minimal.
 
